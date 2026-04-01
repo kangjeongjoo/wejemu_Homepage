@@ -4,356 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>재무ERP - 웹케시㈜</title>
-  <style>
-    /* ===== Reset & Base ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif; color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    img { max-width: 100%; display: block; }
-
-    /* ===== Variables ===== */
-    :root {
-      --primary: #1a4fa0;
-      --primary-dark: #0f3578;
-      --primary-light: #2e6be6;
-      --accent: #ff6b00;
-      --accent2: #00a99d;
-      --bg-light: #f5f7fc;
-      --bg-mid: #eef1f8;
-      --text-dark: #1a1a2e;
-      --text-mid: #555;
-      --text-light: #888;
-      --border: #dde3ef;
-      --white: #fff;
-      --radius: 10px;
-      --shadow: 0 4px 20px rgba(26,79,160,0.10);
-    }
-
-    /* ===== Top Bar ===== */
-    .top-bar {
-      background: #0f3578;
-      color: #aec3e8;
-      font-size: 12px;
-      padding: 6px 0;
-    }
-    .top-bar .inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: flex; justify-content: flex-end; gap: 20px; align-items: center;
-    }
-    .top-bar a { color: #aec3e8; transition: color .2s; }
-    .top-bar a:hover { color: #fff; }
-    .top-bar span.sep { color: #3a5a99; }
-
-    /* ===== Header / GNB ===== */
-    header {
-      position: sticky; top: 0; z-index: 1000;
-      background: var(--white);
-      border-bottom: 2px solid var(--primary);
-      box-shadow: 0 2px 12px rgba(26,79,160,0.08);
-    }
-    .gnb {
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: flex; align-items: center; height: 70px;
-    }
-    .logo {
-      display: flex; align-items: center; gap: 10px; margin-right: 48px;
-    }
-    .logo-icon {
-      width: 38px; height: 38px; background: var(--primary);
-      border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    }
-    .logo-icon svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 2; }
-    .logo-text { font-size: 22px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
-    .logo-text span { color: var(--accent); }
-
-    nav { flex: 1; }
-    nav > ul { display: flex; gap: 4px; }
-    nav > ul > li { position: relative; }
-    nav > ul > li > a {
-      display: block; padding: 0 18px; height: 70px; line-height: 70px;
-      font-size: 15px; font-weight: 600; color: #333;
-      transition: color .2s;
-      white-space: nowrap;
-    }
-    nav > ul > li > a:hover,
-    nav > ul > li.active > a { color: var(--primary); }
-    nav > ul > li > a::after {
-      content: ''; display: block; height: 3px; background: var(--primary);
-      transform: scaleX(0); transition: transform .25s;
-      position: absolute; bottom: 0; left: 18px; right: 18px;
-    }
-    nav > ul > li > a:hover::after,
-    nav > ul > li.active > a::after { transform: scaleX(1); }
-
-    /* Dropdown */
-    .dropdown { display: none; position: absolute; top: 70px; left: 0; min-width: 180px; background: var(--white); border: 1px solid var(--border); border-top: 2px solid var(--primary); box-shadow: 0 8px 24px rgba(0,0,0,.12); border-radius: 0 0 8px 8px; z-index: 200; }
-    nav > ul > li:hover .dropdown { display: block; }
-    .dropdown li a { display: block; padding: 10px 20px; font-size: 14px; color: #444; transition: background .15s, color .15s; }
-    .dropdown li a:hover { background: var(--bg-light); color: var(--primary); }
-
-    .gnb-cta { margin-left: auto; display: flex; gap: 10px; }
-    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all .2s; }
-    .btn-outline { border: 1.5px solid var(--primary); color: var(--primary); background: transparent; }
-    .btn-outline:hover { background: var(--primary); color: #fff; }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-primary:hover { background: var(--primary-dark); }
-    .btn-accent { background: var(--accent); color: #fff; }
-    .btn-accent:hover { background: #e05e00; }
-
-    /* ===== Hero ===== */
-    .hero {
-      background: linear-gradient(135deg, #0f3578 0%, #1a4fa0 50%, #2e6be6 100%);
-      color: var(--white); padding: 100px 24px 80px; position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-    }
-    .hero-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 60px; position: relative; }
-    .hero-text { flex: 1; }
-    .hero-badge {
-      display: inline-block; background: rgba(255,107,0,.2); border: 1px solid rgba(255,107,0,.5);
-      color: #ffb366; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
-    }
-    .hero h1 { font-size: 46px; font-weight: 900; line-height: 1.2; letter-spacing: -1px; margin-bottom: 20px; }
-    .hero h1 em { color: #7eb8ff; font-style: normal; }
-    .hero-sub { font-size: 17px; color: rgba(255,255,255,.85); line-height: 1.8; margin-bottom: 36px; max-width: 540px; }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-hero-primary { background: var(--accent); color: #fff; padding: 14px 32px; font-size: 16px; border-radius: 8px; font-weight: 700; transition: all .2s; }
-    .btn-hero-primary:hover { background: #e05e00; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,0,.4); }
-    .btn-hero-outline { border: 2px solid rgba(255,255,255,.5); color: #fff; padding: 13px 30px; font-size: 16px; border-radius: 8px; font-weight: 600; transition: all .2s; }
-    .btn-hero-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
-
-    .hero-visual { flex: 0 0 420px; }
-    .hero-card {
-      background: rgba(255,255,255,.1); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.2); border-radius: 16px; padding: 28px;
-    }
-    .hero-card-title { font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .hero-stat { background: rgba(255,255,255,.08); border-radius: 10px; padding: 16px; text-align: center; }
-    .hero-stat-num { font-size: 30px; font-weight: 900; color: #7eb8ff; line-height: 1; }
-    .hero-stat-num span { font-size: 16px; }
-    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 6px; }
-    .hero-modules { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .hero-module-tag {
-      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
-      color: rgba(255,255,255,.9); font-size: 12px; padding: 5px 12px; border-radius: 20px;
-    }
-
-    /* ===== Section Common ===== */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-header { text-align: center; margin-bottom: 56px; }
-    .section-label {
-      display: inline-block; color: var(--primary); font-size: 13px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
-    }
-    .section-title { font-size: 34px; font-weight: 800; color: var(--text-dark); line-height: 1.3; letter-spacing: -0.5px; margin-bottom: 14px; }
-    .section-desc { font-size: 16px; color: var(--text-mid); line-height: 1.8; max-width: 640px; margin: 0 auto; }
-
-    /* ===== Intro Cards ===== */
-    .intro { background: var(--bg-light); }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .intro-card {
-      background: var(--white); border-radius: var(--radius); padding: 36px;
-      box-shadow: var(--shadow); border: 1px solid var(--border);
-      transition: transform .25s, box-shadow .25s;
-    }
-    .intro-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(26,79,160,.15); }
-    .intro-card-icon {
-      width: 52px; height: 52px; background: var(--bg-mid); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
-    }
-    .intro-card-icon svg { width: 28px; height: 28px; }
-    .intro-card h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
-    .intro-card p { font-size: 15px; color: var(--text-mid); line-height: 1.8; }
-
-    /* ===== Target Customers ===== */
-    .targets { background: var(--white); }
-    .target-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .target-card {
-      border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 20px;
-      text-align: center; transition: all .25s; position: relative; overflow: hidden;
-    }
-    .target-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: var(--primary); transform: scaleX(0); transition: transform .25s; transform-origin: left;
-    }
-    .target-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-3px); }
-    .target-card:hover::before { transform: scaleX(1); }
-    .target-icon { font-size: 40px; margin-bottom: 14px; }
-    .target-card h3 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
-    .target-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
-
-    /* ===== Modules ===== */
-    .modules { background: var(--bg-light); }
-    .modules-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-    .module-card {
-      background: var(--white); border-radius: var(--radius); padding: 24px 18px;
-      border: 1px solid var(--border); text-align: center;
-      transition: all .25s; cursor: default;
-    }
-    .module-card:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(26,79,160,.25); }
-    .module-icon { font-size: 32px; margin-bottom: 12px; }
-    .module-card h3 { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; transition: color .25s; }
-    .module-card:hover h3 { color: var(--white); }
-    .module-tags { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-    .module-tag {
-      background: var(--bg-mid); color: #555; font-size: 11px; padding: 3px 8px;
-      border-radius: 4px; transition: all .25s;
-    }
-    .module-card:hover .module-tag { background: rgba(255,255,255,.2); color: rgba(255,255,255,.9); }
-
-    /* AI & Banking highlight */
-    .module-card.highlight { border-color: var(--accent2); }
-    .module-card.highlight h3 { color: var(--accent2); }
-    .module-card.highlight:hover { background: var(--accent2); border-color: var(--accent2); }
-    .module-card.highlight:hover h3 { color: var(--white); }
-
-    /* ===== Products ===== */
-    .products { background: var(--white); }
-    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .product-card {
-      border-radius: 14px; overflow: hidden; border: 1.5px solid var(--border);
-      transition: all .25s; display: flex; flex-direction: column;
-    }
-    .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(26,79,160,.18); border-color: var(--primary); }
-    .product-header { padding: 28px 28px 20px; }
-    .product-card:nth-child(1) .product-header { background: linear-gradient(135deg, #0f3578, #1a4fa0); }
-    .product-card:nth-child(2) .product-header { background: linear-gradient(135deg, #1a4fa0, #2e6be6); }
-    .product-card:nth-child(3) .product-header { background: linear-gradient(135deg, #00a99d, #007a71); }
-    .product-badge {
-      display: inline-block; background: rgba(255,255,255,.2); color: rgba(255,255,255,.9);
-      font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px;
-      margin-bottom: 10px; letter-spacing: 0.5px;
-    }
-    .product-header h3 { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
-    .product-header p { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.6; }
-    .product-body { padding: 24px 28px; flex: 1; background: var(--white); }
-    .product-section-title { font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; margin-top: 18px; }
-    .product-section-title:first-child { margin-top: 0; }
-    .product-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .product-list-item {
-      font-size: 13px; padding: 5px 12px; border-radius: 6px; font-weight: 600;
-    }
-    .product-list-item.basic { background: #e8f0ff; color: var(--primary); }
-    .product-list-item.addon { background: #fff3e8; color: var(--accent); border: 1px solid #ffd5b0; }
-    .product-footer { padding: 18px 28px; background: var(--bg-light); border-top: 1px solid var(--border); }
-    .product-cta { display: block; text-align: center; background: var(--primary); color: #fff; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: background .2s; }
-    .product-cta:hover { background: var(--primary-dark); }
-    .product-card:nth-child(3) .product-cta { background: var(--accent2); }
-    .product-card:nth-child(3) .product-cta:hover { background: #007a71; }
-
-    /* ===== Benefits ===== */
-    .benefits { background: var(--bg-light); }
-    .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .benefit-item { text-align: center; padding: 32px 20px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); }
-    .benefit-num { font-size: 42px; font-weight: 900; color: var(--primary); line-height: 1; }
-    .benefit-num span { font-size: 22px; }
-    .benefit-label { font-size: 14px; color: var(--text-mid); margin-top: 10px; font-weight: 600; }
-
-    /* ===== CTA Banner ===== */
-    .cta-banner { background: linear-gradient(135deg, #0f3578 0%, #2e6be6 100%); padding: 70px 24px; }
-    .cta-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-    .cta-inner h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; }
-    .cta-inner p { font-size: 17px; color: rgba(255,255,255,.8); margin-bottom: 36px; }
-    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-cta-white { background: #fff; color: var(--primary); padding: 15px 36px; font-size: 16px; font-weight: 700; border-radius: 8px; transition: all .2s; }
-    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
-    .btn-cta-outline { border: 2px solid rgba(255,255,255,.6); color: #fff; padding: 13px 34px; font-size: 16px; font-weight: 600; border-radius: 8px; transition: all .2s; }
-    .btn-cta-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
-
-    /* ===== Footer ===== */
-    footer { background: #1a1a2e; color: #aaa; font-size: 13px; }
-    .footer-top {
-      border-bottom: 1px solid #2d2d48;
-      max-width: 1200px; margin: 0 auto; padding: 40px 24px;
-      display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;
-    }
-    .footer-brand { flex: 0 0 260px; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-    .footer-logo-icon {
-      width: 32px; height: 32px; background: var(--primary); border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .footer-logo-icon svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
-    .footer-logo-text { font-size: 18px; font-weight: 800; color: #fff; }
-    .footer-logo-text span { color: #7eb8ff; }
-    .footer-brand p { font-size: 13px; color: #888; line-height: 1.7; }
-    .footer-links-group { flex: 1; display: flex; gap: 48px; flex-wrap: wrap; }
-    .footer-col h4 { font-size: 14px; font-weight: 700; color: #ddd; margin-bottom: 14px; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #888; transition: color .2s; font-size: 13px; }
-    .footer-col ul li a:hover { color: #7eb8ff; }
-
-    .footer-contact { margin-left: auto; flex: 0 0 240px; }
-    .footer-contact h4 { font-size: 14px; font-weight: 700; color: #ddd; margin-bottom: 14px; }
-    .contact-phone { font-size: 26px; font-weight: 900; color: var(--white); letter-spacing: -0.5px; margin-bottom: 8px; }
-    .contact-hours { font-size: 12px; color: #888; margin-bottom: 16px; line-height: 1.6; }
-    .footer-social { display: flex; gap: 10px; margin-top: 16px; }
-    .social-btn {
-      width: 36px; height: 36px; border-radius: 8px; background: #2d2d48;
-      display: flex; align-items: center; justify-content: center;
-      color: #aaa; font-size: 13px; font-weight: 700; transition: all .2s;
-    }
-    .social-btn:hover { background: var(--primary); color: #fff; }
-
-    .footer-bottom {
-      max-width: 1200px; margin: 0 auto; padding: 20px 24px;
-      display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;
-    }
-    .footer-info { color: #666; font-size: 12px; line-height: 1.7; }
-    .footer-info strong { color: #999; }
-    .footer-legal { display: flex; gap: 16px; font-size: 12px; }
-    .footer-legal a { color: #777; transition: color .2s; }
-    .footer-legal a:hover { color: #aaa; }
-    .footer-legal a.highlight { color: #7eb8ff; font-weight: 600; }
-    .footer-copyright { width: 100%; text-align: center; color: #555; font-size: 12px; padding-top: 12px; border-top: 1px solid #2d2d48; }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 1024px) {
-      .hero-visual { flex: 0 0 320px; }
-      .hero h1 { font-size: 36px; }
-      .modules-grid { grid-template-columns: repeat(3, 1fr); }
-      .target-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .top-bar { display: none; }
-      .hero-inner { flex-direction: column; }
-      .hero-visual { flex: none; width: 100%; }
-      .hero h1 { font-size: 28px; }
-      .intro-grid { grid-template-columns: 1fr; }
-      .target-grid { grid-template-columns: 1fr 1fr; }
-      .modules-grid { grid-template-columns: repeat(2, 1fr); }
-      .products-grid { grid-template-columns: 1fr; }
-      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-top { flex-direction: column; }
-      .footer-contact { margin-left: 0; flex: none; width: 100%; }
-      nav { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
-<div class="top-bar">
-  <div class="inner">
-    <a href="#">회사소개</a>
-    <span class="sep">|</span>
-    <a href="#">이용약관</a>
-    <span class="sep">|</span>
-    <a href="#" style="color:#ffb366;font-weight:700;">개인정보처리방침</a>
-    <span class="sep">|</span>
-    <a href="#">찾아오시는 길</a>
-    <span class="sep">|</span>
-    <a href="#">블로그</a>
-    <span class="sep">|</span>
-    <a href="#">카페</a>
-  </div>
-</div>
 
 <!-- ===== HEADER / GNB ===== -->
 <header>
@@ -366,50 +20,11 @@
     </a>
     <nav>
       <ul>
-        <li class="active">
-          <a href="#">상품소개</a>
-          <ul class="dropdown">
-            <li><a href="#">제품 개요</a></li>
-            <li><a href="#">재무ERP</a></li>
-            <li><a href="#">SANERP</a></li>
-            <li><a href="#">브랜치 연동</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">주요모듈</a>
-          <ul class="dropdown">
-            <li><a href="#">회계관리</a></li>
-            <li><a href="#">인사급여</a></li>
-            <li><a href="#">예산관리</a></li>
-            <li><a href="#">자금관리</a></li>
-            <li><a href="#">영업물류</a></li>
-            <li><a href="#">AI 에이전트</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">요금안내</a>
-        </li>
-        <li>
-          <a href="#">고객사례</a>
-        </li>
-        <li>
-          <a href="#">고객지원</a>
-          <ul class="dropdown">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">자주 묻는 질문</a></li>
-            <li><a href="#">원격 지원</a></li>
-            <li><a href="#">다운로드</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">방문상담 신청</a>
-        </li>
+        <li><a href="erp-lite.html">재무ERP Lite</a></li>
+        <li><a href="erp.html">재무ERP</a></li>
+        <li><a href="sanerp.html">산학ERP</a></li>
       </ul>
     </nav>
-    <div class="gnb-cta">
-      <a href="#" class="btn btn-outline">무료 체험</a>
-      <a href="#" class="btn btn-accent">도입 문의</a>
-    </div>
   </div>
 </header>
 
@@ -424,10 +39,6 @@
         기업의 전반적인 재무기능을 강화합니다.<br>
         수익성 분석, 예산통제 등 전략적 재무관리를 내재화하세요.
       </p>
-      <div class="hero-btns">
-        <a href="#" class="btn-hero-primary">무료 체험 시작하기</a>
-        <a href="#" class="btn-hero-outline">도입 상담 신청</a>
-      </div>
     </div>
     <div class="hero-visual">
       <div class="hero-card">
@@ -524,234 +135,152 @@
     </div>
     <div class="target-grid">
       <div class="target-card">
-        <div class="target-icon">🏢</div>
-        <h3>중견·중소기업</h3>
-        <p>ERP 도입을 통해 체계적인 경영 관리 체계를 구축하고자 하는 중견·중소기업</p>
-      </div>
-      <div class="target-card">
         <div class="target-icon">📊</div>
-        <h3>경리나라 사용 고객</h3>
-        <p>사업 확장으로 인해 내부적으로 데이터를 더욱 상세하게 관리하고자 하는 고객</p>
+        <h3>재무ERP Lite</h3>
+        <p>자금관리에서 한 걸음 더 나아가 체계적인 재무관리로 성장을 준비하는 중소상공인</p>
       </div>
       <div class="target-card">
-        <div class="target-icon">🔗</div>
-        <h3>브랜치 연동 고객</h3>
-        <p>브랜치와 연동하여 인사/급여/회계 모듈을 사용하고자 하는 중견·중소기업 고객</p>
+        <div class="target-icon">🏢</div>
+        <h3>재무ERP</h3>
+        <p>인사·급여·회계·예산을 통합 관리하고, 브랜치 및 특화ERP와 연동하여 중견·중소기업의 경영 효율을 높이는 상품</p>
       </div>
       <div class="target-card">
         <div class="target-icon">🎓</div>
-        <h3>RERP / SANERP 고객</h3>
-        <p>RERP 사용 중 SANERP 기능이 필요하거나 산학협력단 맞춤 경영관리가 필요한 고객</p>
+        <h3>산학ERP</h3>
+        <p>대학교 산학협력단의 연구비 과제관리 시스템과 연동하여 회계·자금·인사를 아우르는 맞춤형 행정경영관리가 필요한 기관</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== MODULES ===== -->
+<!-- ===== FEATURES ===== -->
 <section class="modules">
   <div class="section-inner">
-    <div class="section-header">
-      <div class="section-label">Key Modules</div>
-      <h2 class="section-title">10가지 핵심 모듈</h2>
-      <p class="section-desc">기업 경영에 필요한 모든 기능을 하나의 플랫폼에서 제공합니다.</p>
-    </div>
-    <div class="modules-grid">
-      <div class="module-card">
-        <div class="module-icon">📒</div>
-        <h3>회계관리</h3>
-        <div class="module-tags">
-          <span class="module-tag">결의서관리</span>
-          <span class="module-tag">전표입력</span>
-          <span class="module-tag">결산관리</span>
-          <span class="module-tag">재무제표</span>
-          <span class="module-tag">고정자산</span>
-          <span class="module-tag">부가세신고</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">👥</div>
-        <h3>인사급여</h3>
-        <div class="module-tags">
-          <span class="module-tag">인사정보</span>
-          <span class="module-tag">급여관리</span>
-          <span class="module-tag">퇴직관리</span>
-          <span class="module-tag">원천세신고</span>
-          <span class="module-tag">근태관리</span>
-          <span class="module-tag">연말정산</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">📋</div>
-        <h3>예산관리</h3>
-        <div class="module-tags">
-          <span class="module-tag">예산편성</span>
-          <span class="module-tag">조정·승인</span>
-          <span class="module-tag">예산집행</span>
-          <span class="module-tag">예산통제</span>
-          <span class="module-tag">예실대비</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">⚙️</div>
-        <h3>기준정보</h3>
-        <div class="module-tags">
-          <span class="module-tag">사용자권한</span>
-          <span class="module-tag">마스터데이터</span>
-          <span class="module-tag">거래처정보</span>
-          <span class="module-tag">품목관리</span>
-          <span class="module-tag">계정정보</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">💳</div>
-        <h3>자금관리</h3>
-        <div class="module-tags">
-          <span class="module-tag">입출금내역</span>
-          <span class="module-tag">자금계획</span>
-          <span class="module-tag">계좌이체</span>
-          <span class="module-tag">자금보고서</span>
-          <span class="module-tag">계좌관리</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">🚚</div>
-        <h3>영업물류</h3>
-        <div class="module-tags">
-          <span class="module-tag">매출/매입</span>
-          <span class="module-tag">수주관리</span>
-          <span class="module-tag">재고관리</span>
-          <span class="module-tag">반품관리</span>
-          <span class="module-tag">세금계산서</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">✅</div>
-        <h3>전자결재</h3>
-        <div class="module-tags">
-          <span class="module-tag">인사결재</span>
-          <span class="module-tag">회계결재</span>
-          <span class="module-tag">자금결재</span>
-          <span class="module-tag">결재함관리</span>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-icon">📱</div>
-        <h3>모바일</h3>
-        <div class="module-tags">
-          <span class="module-tag">결재함</span>
-          <span class="module-tag">근태관리</span>
-          <span class="module-tag">연차관리</span>
-        </div>
-      </div>
-      <div class="module-card highlight">
-        <div class="module-icon">🤖</div>
-        <h3>AI 에이전트</h3>
-        <div class="module-tags">
-          <span class="module-tag">자금 Data 활용</span>
-          <span class="module-tag">재무 Data 분석</span>
-          <span class="module-tag">AI 비서 서비스</span>
-          <span class="module-tag">수익성 분석</span>
-        </div>
-      </div>
-      <div class="module-card highlight">
-        <div class="module-icon">🏦</div>
-        <h3>뱅킹연동</h3>
-        <div class="module-tags">
-          <span class="module-tag">여신상품 연동</span>
-          <span class="module-tag">투자상품 연동</span>
-          <span class="module-tag">은행 제휴</span>
-          <span class="module-tag">AI 에이전트</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="features-layout">
 
-<!-- ===== PRODUCTS ===== -->
-<section class="products">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-label">Product Lineup</div>
-      <h2 class="section-title">제품 구성</h2>
-      <p class="section-desc">기업의 규모와 업종에 맞는 최적의 패키지를 선택하세요.</p>
-    </div>
-    <div class="products-grid">
-
-      <!-- 재무ERP Lite -->
-      <div class="product-card">
-        <div class="product-header">
-          <div class="product-badge">추천 · 핵심 상품</div>
-          <h3>재무ERP Lite</h3>
-          <p>경리나라 및 SERP 고객 중 내부적으로 관리가 필요한 기업을 위한 상품입니다.</p>
-        </div>
-        <div class="product-body">
-          <div class="product-section-title">기본 메뉴</div>
-          <div class="product-list">
-            <span class="product-list-item basic">기준정보</span>
-            <span class="product-list-item basic">영업물류</span>
-            <span class="product-list-item basic">자금관리</span>
-          </div>
-          <div class="product-section-title">부가 상품</div>
-          <div class="product-list">
-            <span class="product-list-item addon">인사급여</span>
-            <span class="product-list-item addon">회계관리</span>
-            <span class="product-list-item addon">예산관리</span>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="#" class="product-cta">상담 신청하기</a>
-        </div>
+      <!-- 좌측 타이틀 -->
+      <div class="features-headline">
+        <p class="features-sub">최고의 핀테크 기업이 만들어가는</p>
+        <h2>재무ERP</h2>
+        <p class="features-em">독보적인 기능을 경험해보세요.</p>
       </div>
 
-      <!-- 재무ERP -->
-      <div class="product-card">
-        <div class="product-header">
-          <div class="product-badge">특화ERP와 연계</div>
-          <h3>재무ERP</h3>
-          <p>고객이 사용하는 특화ERP 와 연동하여 중견·중소기업 고객이 사용할 수 있는 상품을 제공합니다.</p>
-        </div>
-        <div class="product-body">
-          <div class="product-section-title">기본 메뉴</div>
-          <div class="product-list">
-            <span class="product-list-item basic">기준정보</span>
-            <span class="product-list-item basic">회계관리</span>
-          </div>
-          <div class="product-section-title">부가 상품</div>
-          <div class="product-list">
-            <span class="product-list-item addon">인사급여</span>
-            <span class="product-list-item addon">예산관리</span>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="#" class="product-cta">상담 신청하기</a>
-        </div>
-      </div>
+      <!-- 우측 카드 그리드 -->
+      <div class="features-grid">
 
-      <!-- SANERP -->
-      <div class="product-card">
-        <div class="product-header">
-          <div class="product-badge">산학협력단 특화</div>
-          <h3>SANERP</h3>
-          <p>RERP와 연동하여 산학협력단에 맞는 경영관리 상품을 제공합니다.</p>
-        </div>
-        <div class="product-body">
-          <div class="product-section-title">기본 메뉴</div>
-          <div class="product-list">
-            <span class="product-list-item basic">기준정보</span>
-            <span class="product-list-item basic">자금관리</span>
-            <span class="product-list-item basic">회계관리</span>
-            <span class="product-list-item basic">인사급여</span>
-            <span class="product-list-item basic">예산관리</span>
+        <div class="feature-card">
+          <h3>국세청, 금융 기관 자료 자동 수집</h3>
+          <ul>
+            <li>전체 계좌 잔액, 입출 내역을 실시간 수집, 입출내역보고서 알림톡 전송</li>
+            <li>여러 계좌의 잔액을 한 계좌로 집금 기능</li>
+            <li>홈택스, 카드사, 은행 매출/매입 정보 수집</li>
+          </ul>
+          <div class="feature-icon feature-icon--purple">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="6" width="32" height="36" rx="3" fill="#c4b5fd"/><rect x="13" y="14" width="22" height="3" rx="1.5" fill="#7c3aed"/><rect x="13" y="21" width="16" height="3" rx="1.5" fill="#7c3aed"/><rect x="13" y="28" width="20" height="3" rx="1.5" fill="#7c3aed"/></svg>
           </div>
         </div>
-        <div class="product-footer">
-          <a href="#" class="product-cta">상담 신청하기</a>
-        </div>
-      </div>
 
+        <div class="feature-card">
+          <h3>복잡하고 어려운 경영관리를 쉽게</h3>
+          <ul>
+            <li>체계적인 프로세스 메뉴로 업무 흐름을 한 눈에</li>
+            <li>업무별 데이터 연동으로 증빙, 보고서까지 자동 생성</li>
+            <li>세금계산서 무료 발행으로 비용 절감</li>
+          </ul>
+          <div class="feature-icon feature-icon--green">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="20" width="16" height="16" rx="2" fill="#86efac"/><rect x="26" y="12" width="16" height="24" rx="2" fill="#22c55e"/><rect x="6" y="6" width="16" height="10" rx="2" fill="#bbf7d0"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>증빙 기반 회계 장부 자동 처리</h3>
+          <ul>
+            <li>홈택스 매입/매출정보 전표생성</li>
+            <li>계좌 입출내역정보 전표생성</li>
+            <li>카드사 매출/매입정보 전표생성</li>
+          </ul>
+          <div class="feature-icon feature-icon--pink">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="22" width="12" height="12" rx="2" fill="#f9a8d4"/><rect x="28" y="14" width="12" height="12" rx="2" fill="#ec4899"/><line x1="20" y1="22" x2="34" y2="20" stroke="#ec4899" stroke-width="2.5"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>전문 컨설턴트의 맞춤 서비스</h3>
+          <ul>
+            <li>전국 지사의 맞춤형 컨설팅</li>
+            <li>전문 고객센터를 통한 신속한 대응</li>
+            <li>세법 변경 등 최신화 서비스 제공</li>
+          </ul>
+          <div class="feature-icon feature-icon--blue">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="16" r="8" fill="#93c5fd"/><path d="M10 38c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>전자결재</h3>
+          <ul>
+            <li>인사/회계/자금 전자결재 통합 관리</li>
+            <li>결재선 설정 및 위임 기능</li>
+            <li>결재 현황 실시간 모니터링</li>
+          </ul>
+          <div class="feature-icon feature-icon--green">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="28" height="32" rx="3" fill="#bbf7d0"/><polyline points="18,24 22,28 30,20" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="14" width="14" height="2.5" rx="1.25" fill="#86efac"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>모바일</h3>
+          <ul>
+            <li>모바일 결재함으로 언제 어디서나 결재</li>
+            <li>근태 및 연차 관리 모바일 지원</li>
+            <li>실시간 알림으로 업무 지연 방지</li>
+          </ul>
+          <div class="feature-icon feature-icon--blue">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="4" width="20" height="40" rx="4" fill="#bfdbfe"/><rect x="18" y="8" width="12" height="28" rx="1" fill="#3b82f6" opacity=".3"/><circle cx="24" cy="40" r="2" fill="#3b82f6"/><rect x="20" y="6" width="8" height="1.5" rx=".75" fill="#3b82f6"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>AI 에이전트</h3>
+          <ul>
+            <li>자금 + 재무 Data를 활용한 AI 비서 서비스</li>
+            <li>수익성 분석 및 예산통제 자동화</li>
+            <li>경영 의사결정 지원 리포트 생성</li>
+          </ul>
+          <div class="feature-icon feature-icon--purple">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="10" fill="#ddd6fe"/><circle cx="24" cy="20" r="5" fill="#7c3aed"/><path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="14" r="4" fill="#c4b5fd"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <h3>뱅킹연동</h3>
+          <ul>
+            <li>AI 에이전트를 통한 여신 및 투자상품 연동</li>
+            <li>은행 제휴를 통한 금융 서비스 확장</li>
+            <li>실시간 계좌 잔액 및 입출금 자동 수집</li>
+          </ul>
+          <div class="feature-icon feature-icon--gray">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="18" width="36" height="22" rx="3" fill="#e5e7eb"/><rect x="6" y="12" width="36" height="10" rx="2" fill="#9ca3af"/><rect x="10" y="28" width="10" height="6" rx="1" fill="#6b7280"/><rect x="24" y="30" width="14" height="2" rx="1" fill="#9ca3af"/><path d="M10 12L24 6l14 6" fill="#d1d5db"/></svg>
+          </div>
+        </div>
+
+        <div class="feature-card feature-card--wide">
+          <h3>비즈니스 맞춤형 커스터마이징 제공</h3>
+          <ul>
+            <li>기술연구소에서 고객사를 직접 방문하여 요구사항 분석</li>
+            <li>고객의 요구사항에 맞게 서비스 제공</li>
+            <li>개발 과정 중 중간 점검 서비스 제공</li>
+          </ul>
+          <div class="feature-icon feature-icon--gray">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="10" width="28" height="22" rx="3" fill="#d1d5db"/><rect x="14" y="34" width="12" height="4" rx="1" fill="#9ca3af"/><rect x="10" y="38" width="20" height="3" rx="1" fill="#9ca3af"/><circle cx="38" cy="34" r="6" fill="#6b7280"/><path d="M36 34h4M38 32v4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- ===== BENEFITS ===== -->
 <section class="benefits">
@@ -787,8 +316,64 @@
     <h2>지금 바로 재무ERP를 경험해보세요</h2>
     <p>전문 컨설턴트가 귀사에 맞는 최적의 솔루션을 제안해 드립니다.<br>무료 체험 및 방문 상담 신청으로 시작하세요.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-cta-white">무료 체험 신청</a>
-      <a href="#" class="btn-cta-outline">📞 1670-3636 전화 상담</a>
+      <a href="#" class="btn-cta-outline" onclick="openModal();return false;">📞 1670-3636 전화 상담</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">회사명 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="회사명 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">사업자번호 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이름 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="이름 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">연락처 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이메일 <span class="req">*</span></label>
+        <input type="email" class="form-input" placeholder="이메일 주소 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">비고</label>
+        <input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." />
+      </div>
+      <div class="form-notice">
+        · 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span>
+      </div>
+      <p style="font-size:13px;color:#555;text-align:center;margin-bottom:14px;">
+        자세한 상담을 위해 <strong>아래 체크 후 상담 신청</strong> 바랍니다
+      </p>
+      <div class="form-checks">
+        <label class="form-check">
+          <input type="checkbox" />
+          마케팅 정보 수신 동의(선택)
+        </label>
+        <label class="form-check">
+          <input type="checkbox" />
+          개인정보 수집 및 이용 동의(필수)
+        </label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
     </div>
   </div>
 </div>
@@ -815,10 +400,9 @@
       <div class="footer-col">
         <h4>상품</h4>
         <ul>
-          <li><a href="#">재무ERP 소개</a></li>
-          <li><a href="#">SANERP</a></li>
-          <li><a href="#">브랜치 연동</a></li>
-          <li><a href="#">요금 안내</a></li>
+          <li><a href="erp-lite.html">재무ERP Lite</a></li>
+          <li><a href="erp.html">재무ERP</a></li>
+          <li><a href="sanerp.html">산학ERP</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -835,8 +419,7 @@
         <ul>
           <li><a href="#">공지사항</a></li>
           <li><a href="#">자주 묻는 질문</a></li>
-          <li><a href="#">원격 지원</a></li>
-          <li><a href="#">다운로드</a></li>
+          <li><a href="#" onclick="window.open('support-popup.html','원격지원','width=620,height=780,scrollbars=yes,resizable=no');return false;">원격 지원</a></li>
         </ul>
       </div>
     </div>
@@ -846,10 +429,9 @@
       <div class="contact-phone">1670-3636</div>
       <div class="contact-hours">
         월~금 09:00 ~ 19:00<br>
-        토요일 09:00 ~ 12:00<br>
-        일요일 · 공휴일 휴무
+        토 · 일 · 공휴일 휴무
       </div>
-      <a href="#" class="btn btn-outline" style="font-size:13px;padding:8px 16px;">방문상담 신청</a>
+      <a href="#" class="btn btn-outline" style="font-size:13px;padding:8px 16px;" onclick="openModal();return false;">방문상담 신청</a>
     </div>
   </div>
 
@@ -860,10 +442,10 @@
       이메일 : serp@webcash.co.kr
     </div>
     <div class="footer-legal">
-      <a href="#">회사소개</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
       <a href="#" class="highlight">개인정보처리방침</a>
       <a href="#">이용약관</a>
-      <a href="#">찾아오시는 길</a>
+      <a href="partnership.html">찾아오시는 길</a>
     </div>
     <div class="footer-copyright">
       Copyright © 2017 Webcash Corp. All Rights Reserved.
@@ -871,5 +453,18 @@
   </div>
 </footer>
 
+<script>
+  function openModal() {
+    document.getElementById('consultModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('consultModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('consultModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
 </body>
 </html>

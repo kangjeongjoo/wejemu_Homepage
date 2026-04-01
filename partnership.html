@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제휴 문의 - 재무ERP</title>
+  <link rel="stylesheet" href="css/partnership.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="erp-lite.html">재무ERP Lite</a></li>
+        <li><a href="erp.html">재무ERP</a></li>
+        <li><a href="sanerp.html">산학ERP</a></li>
+      </ul>
+    </nav>
+    <div class="gnb-cta">
+      <button class="btn-consult" onclick="openModal()">상담 신청</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-badge">📍 찾아오시는 길</div>
+    <h1>찾아오시는 길 &amp; Contact us</h1>
+    <p>웹케시㈜ 재무ERP 사업부로 방문하시거나 문의해 주세요.<br>전문 담당자가 친절하게 안내해 드립니다.</p>
+  </div>
+</div>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section">
+  <div class="contact-inner">
+
+    <!-- 지도 -->
+    <div class="map-left">
+      <div class="map-left-card">
+        <iframe
+          src="https://maps.google.com/maps?q=서울+영등포구+영신로+220+KnK디지털타워&hl=ko&z=16&output=embed"
+          width="100%" height="360" style="border:0; border-radius:12px 12px 0 0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-left-info">
+          <div class="map-left-row">
+            <span class="map-left-icon">📍</span>
+            <div>
+              <div class="map-left-label">주소</div>
+              <div class="map-left-val">서울 영등포구 영신로 220<br>KnK디지털타워 20층 웹케시㈜</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 문의 폼 -->
+    <div class="form-card">
+      <div class="form-card-title">제휴 문의하기</div>
+      <div class="form-card-sub">아래 양식을 작성해 주시면 담당자가 확인 후 연락드리겠습니다.</div>
+
+      <div class="field-group">
+        <label class="field-label">담당자 이름 <span class="req">*</span></label>
+        <input type="text" class="field-input" placeholder="담당자 이름을 입력해 주세요" />
+      </div>
+      <div class="field-group">
+        <label class="field-label">연락처 <span class="req">*</span></label>
+        <input type="tel" class="field-input" placeholder="연락처를 입력해 주세요 ('-' 제외)" />
+      </div>
+      <div class="field-group">
+        <label class="field-label">이메일 <span class="req">*</span></label>
+        <input type="email" class="field-input" placeholder="이메일 주소를 입력해 주세요" />
+      </div>
+      <div class="field-group">
+        <label class="field-label">회사명 <span class="req">*</span></label>
+        <input type="text" class="field-input" placeholder="회사명을 입력해 주세요" />
+      </div>
+      <div class="field-group">
+        <label class="field-label">제휴 유형 <span class="req">*</span></label>
+        <select class="field-select">
+          <option value="">제휴 유형을 선택해 주세요</option>
+          <option>리셀러 / 대리점 파트너십</option>
+          <option>기술 / API 연동 파트너십</option>
+          <option>콘텐츠 / 마케팅 파트너십</option>
+          <option>공공기관 / 교육기관 파트너십</option>
+          <option>기타</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label class="field-label">문의 내용 <span class="req">*</span></label>
+        <textarea class="field-textarea" placeholder="제휴 목적, 제안 내용, 기대 효과 등을 자유롭게 작성해 주세요."></textarea>
+      </div>
+      <div class="field-group">
+        <label class="field-label">첨부 파일</label>
+        <div class="file-upload-area">
+          <input type="file" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip" />
+          <div class="file-upload-icon">📎</div>
+          <div class="file-upload-text"><strong>파일을 드래그하거나 클릭</strong>하여 첨부하세요</div>
+          <div class="file-limit">최대 3개 파일 / 각 5MB 이하 · PDF, Word, PPT, Excel, ZIP</div>
+        </div>
+      </div>
+
+      <div class="privacy-box">
+        <div class="privacy-title">개인정보 수집 및 이용 동의</div>
+        <div class="privacy-content">
+          웹케시㈜는 제휴 문의 처리를 위해 아래와 같이 개인정보를 수집·이용합니다.<br>
+          · 수집 항목: 담당자 이름, 연락처, 이메일, 회사명<br>
+          · 수집 목적: 제휴 문의 접수 및 처리, 결과 안내<br>
+          · 보유 기간: 문의 처리 완료 후 6개월<br>
+          위 개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의 거부 시 제휴 문의 처리가 어려울 수 있습니다.
+        </div>
+        <label class="privacy-agree">
+          <input type="checkbox" id="privacyCheck" />
+          개인정보 수집 및 이용에 동의합니다. (필수)
+        </label>
+      </div>
+
+      <button class="btn-submit-main">제휴 문의 보내기</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ===== FLOATING SIDEBAR ===== -->
+<div class="float-sidebar" id="floatSidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#">
+    <div class="float-btn-icon">📞</div>
+    <div class="float-btn-label">신규가입<br>상담신청</div>
+    <div class="float-btn-num">1670-3636</div>
+  </a>
+  <a class="float-btn" href="free-trial.html">
+    <div class="float-btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1a4fa0" stroke-width="1.8">
+        <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+      </svg>
+    </div>
+    <div class="float-btn-label">재무ERP<br>Lite</div>
+    <div class="float-btn-accent">무료체험</div>
+  </a>
+  <a class="float-btn" href="partnership.html" style="background:#f0f5ff;">
+    <div class="float-btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1a4fa0" stroke-width="1.8">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+      </svg>
+    </div>
+    <div class="float-btn-label">제휴 문의</div>
+  </a>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">회사명 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="회사명 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">사업자번호 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이름 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="이름 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">연락처 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이메일 <span class="req">*</span></label>
+        <input type="email" class="form-input" placeholder="이메일 주소 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">비고</label>
+        <input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." />
+      </div>
+      <div class="form-notice">
+        · 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span>
+      </div>
+      <p style="font-size:13px;color:#555;text-align:center;margin-bottom:14px;">
+        자세한 상담을 위해 <strong>아래 체크 후 상담 신청</strong> 바랍니다
+      </p>
+      <div class="form-checks">
+        <label class="form-check">
+          <input type="checkbox" />마케팅 정보 수신 동의(선택)
+        </label>
+        <label class="form-check">
+          <input type="checkbox" />개인정보 수집 및 이용 동의(필수)
+        </label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="footer-logo-text">재무<span>ERP</span></div>
+      </div>
+      <p>중소기업을 위한<br>통합 재무관리 ERP 솔루션</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">B</a>
+        <a href="#" class="social-btn">C</a>
+        <a href="#" class="social-btn">f</a>
+      </div>
+    </div>
+    <div class="footer-links-group">
+      <div class="footer-col">
+        <h4>상품</h4>
+        <ul>
+          <li><a href="erp-lite.html">재무ERP Lite</a></li>
+          <li><a href="erp.html">재무ERP</a></li>
+          <li><a href="sanerp.html">산학ERP</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>모듈</h4>
+        <ul>
+          <li><a href="#">인사·급여</a></li>
+          <li><a href="#">회계관리</a></li>
+          <li><a href="#">영업물류</a></li>
+          <li><a href="#">자금관리</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>고객지원</h4>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주 묻는 질문</a></li>
+          <li><a href="#" onclick="window.open('support-popup.html','원격지원','width=620,height=780,scrollbars=yes,resizable=no');return false;">원격 지원</a></li>
+          <li><a href="#">다운로드</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4>고객센터</h4>
+      <div class="contact-phone">1670-3636</div>
+      <div class="contact-hours">
+        월~금 09:00 ~ 19:00<br>
+        토 · 일 · 공휴일 휴무
+      </div>
+      <button class="btn-consult" onclick="openModal()">방문상담 신청</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-info">
+      <strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>
+      통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>
+      이메일 : serp@webcash.co.kr
+    </div>
+    <div class="footer-legal">
+      <a href="#" class="hl">개인정보처리방침</a>
+      <a href="#">이용약관</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  function openModal() {
+    document.getElementById('consultModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('consultModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('consultModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>재무ERP Lite - 웹케시㈜</title>
+  <link rel="stylesheet" href="css/erp-lite.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li class="active"><a href="erp-lite.html">재무ERP Lite</a></li>
+        <li><a href="erp.html">재무ERP</a></li>
+        <li><a href="sanerp.html">산학ERP</a></li>
+      </ul>
+    </nav>
+    <div class="gnb-cta">
+      <button class="btn-consult" onclick="openModal()">도입 문의</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">💡 중소기업 맞춤형 ERP</div>
+      <h1>더 똑똑하게, 더 빠르게<br><em>재무ERP Lite</em></h1>
+      <p class="hero-desc">
+        중소기업의 재무 업무를 자동화하는 올인원 ERP 솔루션입니다.<br>
+        모든 증빙과 통장내역을 자동 스크래핑하여 전표를 자동 생성,<br>
+        경리 업무 시간을 획기적으로 줄여드립니다.
+      </p>
+      <div class="hero-btns">
+        <a href="free-trial.html" class="btn-hero-accent">무료 체험 신청</a>
+        <a href="#" class="btn-hero-outline" onclick="openModal();return false;">도입 상담 신청</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title">주요 모듈 구성</div>
+        <div class="module-grid">
+          <div class="module-chip">
+            <div class="module-chip-icon">👥</div>
+            <div class="module-chip-label">인사·급여</div>
+          </div>
+          <div class="module-chip">
+            <div class="module-chip-icon">📒</div>
+            <div class="module-chip-label">회계관리</div>
+          </div>
+          <div class="module-chip">
+            <div class="module-chip-icon">🚚</div>
+            <div class="module-chip-label">영업물류</div>
+          </div>
+          <div class="module-chip">
+            <div class="module-chip-icon">💳</div>
+            <div class="module-chip-label">자금관리</div>
+          </div>
+          <div class="module-chip">
+            <div class="module-chip-icon">📱</div>
+            <div class="module-chip-label">모바일</div>
+          </div>
+          <div class="module-chip">
+            <div class="module-chip-icon">✅</div>
+            <div class="module-chip-label">전자결재</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY FEATURES ===== -->
+<section class="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Key Features</div>
+      <h2 class="section-title">재무ERP Lite 핵심 특장점</h2>
+      <p class="section-desc">복잡한 경리 업무를 자동화하여 핵심 경영에 집중할 수 있게 합니다.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🤖</div>
+        <h3>증빙 자동 스크래핑</h3>
+        <p>홈택스, 카드사, 은행 등 모든 증빙 자료를 자동으로 수집합니다. 수기 입력 없이 데이터가 자동으로 반영되어 업무 효율이 대폭 향상됩니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">📋</div>
+        <h3>통장내역 자동 전표 생성</h3>
+        <p>계좌 입출금 내역을 실시간으로 수집하여 회계 전표를 자동 생성합니다. 전표 입력 시간을 90% 이상 줄여드립니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">💰</div>
+        <h3>실시간 자금 현황 관리</h3>
+        <p>전체 계좌 잔액과 입출금 내역을 실시간으로 확인하고, 자금계획 대비 실적을 한눈에 파악할 수 있습니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🏛️</div>
+        <h3>홈택스 매입·매출 일괄반영</h3>
+        <p>홈택스에서 자동 수집된 매입·매출 자료를 구매·판매 등록에 일괄 반영합니다. 수기 입력 없이 세금계산서 데이터가 즉시 회계 처리됩니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">🚚</div>
+        <h3>영업물류 통합관리</h3>
+        <p>매출/매입, 수주, 재고, 반품까지 한 곳에서 관리합니다. 세금계산서 자동 발행으로 거래 업무를 간소화합니다.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">👥</div>
+        <h3>인사·급여 자동화</h3>
+        <p>급여 계산부터 원천세 신고, 연말정산, 퇴직금 정산까지 자동으로 처리합니다. 복잡한 인사 업무를 간편하게 해결하세요.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap">📱</div>
+        <h3>모바일 결재 &amp; 근태관리</h3>
+        <p>언제 어디서나 모바일로 결재하고, 근태와 연차를 관리합니다. 실시간 알림으로 업무 지연을 방지합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTO SCRAPING ===== -->
+<section class="scraping">
+  <div class="scraping-inner">
+    <div class="scraping-text">
+      <div class="badge">자동화 핵심 기능</div>
+      <h2>모든 증빙을 <em>자동으로 수집</em>하여<br>전표까지 자동 생성</h2>
+      <div class="scraping-list">
+        <div class="scraping-item">
+          <div class="scraping-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <p><strong>홈택스 매입/매출 자동 수집</strong> — 세금계산서, 현금영수증 데이터를 자동으로 가져와 전표를 생성합니다.</p>
+        </div>
+        <div class="scraping-item">
+          <div class="scraping-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <p><strong>카드사 매출/매입 자동 반영</strong> — 법인카드 및 개인카드 사용 내역을 자동 수집하여 비용처리합니다.</p>
+        </div>
+        <div class="scraping-item">
+          <div class="scraping-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <p><strong>계좌 입출금 실시간 수집</strong> — 연동된 모든 계좌의 거래 내역을 실시간으로 수집하고 자동 전표 처리합니다.</p>
+        </div>
+        <div class="scraping-item">
+          <div class="scraping-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <p><strong>입출내역보고서 알림톡 자동 발송</strong> — 주요 자금 변동 시 담당자에게 즉시 알림을 전송합니다.</p>
+        </div>
+        <div class="scraping-item">
+          <div class="scraping-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <p><strong>구매·판매 등록 자동반영</strong> — 홈택스 매입/매출 증빙자료 기반으로 구매·판매 내역에 자동 반영합니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scraping-visual">
+      <div class="scraping-card">
+        <div class="hero-card-title" style="margin-bottom:16px;">자동화 프로세스</div>
+        <div class="scraping-flow">
+          <div class="flow-item"><div class="flow-item-icon">🏦</div><div>은행 / 카드사 / 홈택스 데이터 수집</div></div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-item"><div class="flow-item-icon">⚙️</div><div>자동 분류 및 계정 매핑</div></div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-item"><div class="flow-item-icon">📋</div><div>회계 전표 자동 생성</div></div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-item"><div class="flow-item-icon">📊</div><div>재무제표 자동 완성</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODULES ===== -->
+<section class="modules">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Module</div>
+      <h2 class="section-title">주요 모듈 구성</h2>
+      <p class="section-desc">중소기업 업무에 최적화된 6가지 핵심 모듈을 제공합니다.</p>
+    </div>
+    <div class="modules-grid">
+
+      <div class="module-card">
+        <div class="module-icon-wrap">👥</div>
+        <div class="module-body">
+          <h3>인사·급여</h3>
+          <p>임직원 기본정보부터 급여 계산, 퇴직금 정산, 원천세 신고, 연말정산까지 인사 전 과정을 자동화합니다. 근태 데이터와 연동하여 급여를 정확하게 산출합니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">인사정보</span>
+            <span class="module-tag">급여관리</span>
+            <span class="module-tag">퇴직관리</span>
+            <span class="module-tag">원천세신고</span>
+            <span class="module-tag">근태관리</span>
+            <span class="module-tag">연말정산</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon-wrap">📒</div>
+        <div class="module-body">
+          <h3>회계관리</h3>
+          <p>홈택스·카드사·은행 데이터를 자동 수집하여 전표를 자동 생성합니다. 결의서 작성부터 결산·재무제표·부가세 신고까지 회계 업무 전반을 지원합니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">결의서관리</span>
+            <span class="module-tag">전표입력</span>
+            <span class="module-tag">결산관리</span>
+            <span class="module-tag">재무제표</span>
+            <span class="module-tag">고정자산</span>
+            <span class="module-tag">부가세신고</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon-wrap">🚚</div>
+        <div class="module-body">
+          <h3>영업물류</h3>
+          <p>견적·수주부터 매출·매입, 재고·반품 관리까지 영업과 물류를 한 곳에서 처리합니다. 세금계산서를 무료로 발행하고 홈택스 자료를 자동 수집합니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">매출/매입</span>
+            <span class="module-tag">수주관리</span>
+            <span class="module-tag">재고관리</span>
+            <span class="module-tag">반품관리</span>
+            <span class="module-tag">세금계산서</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon-wrap">💳</div>
+        <div class="module-body">
+          <h3>자금관리</h3>
+          <p>전체 계좌 잔액과 입출금 내역을 실시간으로 수집·집계합니다. 자금계획 대비 실적을 분석하고, 계좌이체와 자금보고서로 현금 흐름을 한눈에 파악합니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">입출금내역</span>
+            <span class="module-tag">자금계획</span>
+            <span class="module-tag">계좌이체</span>
+            <span class="module-tag">자금보고서</span>
+            <span class="module-tag">계좌관리</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon-wrap">📱</div>
+        <div class="module-body">
+          <h3>모바일</h3>
+          <p>스마트폰으로 언제 어디서나 결재함을 확인하고 즉시 처리합니다. 출퇴근 근태 등록, 연차 신청·조회까지 모바일로 간편하게 처리할 수 있습니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">결재함</span>
+            <span class="module-tag">근태관리</span>
+            <span class="module-tag">연차관리</span>
+            <span class="module-tag">실시간 알림</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon-wrap">✅</div>
+        <div class="module-body">
+          <h3>전자결재</h3>
+          <p>인사·회계·자금 관련 문서를 전자결재로 처리합니다. 결재선을 자유롭게 설정하고 위임도 가능하며, 결재 현황을 실시간으로 모니터링할 수 있습니다.</p>
+          <div class="module-tags">
+            <span class="module-tag">인사결재</span>
+            <span class="module-tag">회계결재</span>
+            <span class="module-tag">자금결재</span>
+            <span class="module-tag">결재선 설정</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRIAL ===== -->
+<section class="trial">
+  <div class="section-inner">
+    <div class="trial-box">
+      <div class="trial-badge">✅ 무료 체험 제공</div>
+      <h2>지금 바로 재무ERP Lite를<br>무료로 체험해보세요</h2>
+      <p>
+        복잡한 설치 없이 바로 시작할 수 있습니다.<br>
+        전문 컨설턴트가 귀사에 맞는 최적의 활용 방법을 안내해 드립니다.
+      </p>
+      <div class="trial-btns">
+        <a href="free-trial.html" class="btn-trial">무료 체험 신청</a>
+        <a href="#" class="btn-consult2" onclick="openModal();return false;">도입 상담 신청</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOATING SIDEBAR ===== -->
+<div class="float-sidebar" id="floatSidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#">
+    <div class="float-btn-icon">📞</div>
+    <div class="float-btn-label">신규가입<br>상담신청</div>
+    <div class="float-btn-num">1670-3636</div>
+  </a>
+  <a class="float-btn" href="free-trial.html">
+    <div class="float-btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1a4fa0" stroke-width="1.8">
+        <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+      </svg>
+    </div>
+    <div class="float-btn-label">재무ERP<br>Lite</div>
+    <div class="float-btn-accent">무료체험</div>
+  </a>
+  <a class="float-btn" href="partnership.html">
+    <div class="float-btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1a4fa0" stroke-width="1.8">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+      </svg>
+    </div>
+    <div class="float-btn-label">제휴 문의</div>
+  </a>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP Lite</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">회사명 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="회사명 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">사업자번호 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이름 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="이름 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">연락처 <span class="req">*</span></label>
+        <input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">이메일 <span class="req">*</span></label>
+        <input type="email" class="form-input" placeholder="이메일 주소 입력" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">비고</label>
+        <input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." />
+      </div>
+      <div class="form-notice">
+        · 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span>
+      </div>
+      <p style="font-size:13px;color:#555;text-align:center;margin-bottom:14px;">
+        자세한 상담을 위해 <strong>아래 체크 후 상담 신청</strong> 바랍니다
+      </p>
+      <div class="form-checks">
+        <label class="form-check">
+          <input type="checkbox" />마케팅 정보 수신 동의(선택)
+        </label>
+        <label class="form-check">
+          <input type="checkbox" />개인정보 수집 및 이용 동의(필수)
+        </label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="footer-logo-text">재무<span>ERP</span></div>
+      </div>
+      <p>중소기업을 위한<br>통합 재무관리 ERP 솔루션</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">B</a>
+        <a href="#" class="social-btn">C</a>
+        <a href="#" class="social-btn">f</a>
+      </div>
+    </div>
+    <div class="footer-links-group">
+      <div class="footer-col">
+        <h4>상품</h4>
+        <ul>
+          <li><a href="erp-lite.html">재무ERP Lite</a></li>
+          <li><a href="erp.html">재무ERP</a></li>
+          <li><a href="sanerp.html">산학ERP</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>모듈</h4>
+        <ul>
+          <li><a href="#">인사·급여</a></li>
+          <li><a href="#">회계관리</a></li>
+          <li><a href="#">영업물류</a></li>
+          <li><a href="#">자금관리</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>고객지원</h4>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주 묻는 질문</a></li>
+          <li><a href="#" onclick="window.open('support-popup.html','원격지원','width=620,height=780,scrollbars=yes,resizable=no');return false;">원격 지원</a></li>
+          <li><a href="#">다운로드</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4>고객센터</h4>
+      <div class="contact-phone">1670-3636</div>
+      <div class="contact-hours">
+        월~금 09:00 ~ 19:00<br>
+        토 · 일 · 공휴일 휴무
+      </div>
+      <button class="btn-consult" onclick="openModal()">방문상담 신청</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-info">
+      <strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>
+      통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>
+      이메일 : serp@webcash.co.kr
+    </div>
+    <div class="footer-legal">
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="#" class="hl">개인정보처리방침</a>
+      <a href="#">이용약관</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+    <div class="footer-copyright">Copyright © 2017 Webcash Corp. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+  function openModal() {
+    document.getElementById('consultModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('consultModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('consultModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+</body>
+</html>

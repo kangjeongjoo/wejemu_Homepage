@@ -1,0 +1,84 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+      color: #333; line-height: 1.6; background: #fff; font-size: 14px;
+      padding: 30px 28px 40px;
+    }
+    h1 {
+      font-size: 20px; font-weight: 800; text-align: center;
+      color: #1a1a2e; margin-bottom: 24px; letter-spacing: -0.3px;
+    }
+
+    /* 고객센터 배너 */
+    .cs-banner {
+      background: #eef3fb; border-radius: 8px; padding: 14px 18px;
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+      font-size: 13px; color: #333;
+    }
+    .cs-banner-icon { font-size: 18px; }
+    .cs-banner strong { color: #1a4fa0; font-size: 17px; font-weight: 900; letter-spacing: -0.5px; }
+
+    /* 공지 */
+    .notice {
+      font-size: 12.5px; color: #555; line-height: 1.7;
+      border-top: 1px solid #e0e0e0; padding-top: 14px; margin-bottom: 22px;
+    }
+    .notice p + p { margin-top: 2px; }
+
+    /* 섹션 헤더 */
+    .section-header {
+      background: #1a4fa0; color: #fff; font-size: 14px; font-weight: 700;
+      text-align: center; padding: 10px; border-radius: 4px 4px 0 0; margin-bottom: 0;
+    }
+
+    /* ARS 테이블 */
+    .ars-table {
+      width: 100%; border-collapse: collapse; margin-bottom: 24px;
+      border: 1px solid #ccd6e8; border-top: none;
+    }
+    .ars-table th {
+      background: #dce8f7; color: #1a4fa0; font-size: 13px; font-weight: 700;
+      padding: 9px 12px; text-align: center; border: 1px solid #ccd6e8;
+    }
+    .ars-table td {
+      padding: 8px 12px; text-align: center; border: 1px solid #ccd6e8;
+      font-size: 13px; color: #333; vertical-align: middle;
+    }
+    .ars-table td.step1 { font-weight: 600; }
+    .ars-table td.num { font-weight: 700; color: #1a4fa0; }
+
+    /* 원격상담 */
+    .remote-desc {
+      font-size: 13px; color: #555; text-align: center; line-height: 1.8;
+      padding: 16px 12px; border: 1px solid #ccd6e8; border-top: none;
+      margin-bottom: 12px;
+    }
+    .remote-btns {
+      display: flex; gap: 10px; justify-content: center; margin-bottom: 24px;
+    }
+    .remote-btn {
+      border: 1.5px solid #aab8d0; border-radius: 6px; padding: 8px 22px;
+      font-size: 13px; font-weight: 600; color: #333; background: #fff;
+      cursor: pointer; transition: all .2s; font-family: inherit;
+      text-decoration: none; display: inline-block;
+    }
+    .remote-btn:hover { background: #1a4fa0; color: #fff; border-color: #1a4fa0; }
+
+    /* 원격상담 절차 */
+    .process-title {
+      font-size: 15px; font-weight: 800; text-align: center;
+      color: #1a1a2e; margin-bottom: 20px;
+    }
+    .process-steps {
+      display: flex; align-items: center; justify-content: center; gap: 0;
+    }
+    .process-step { text-align: center; flex: 1; }
+    .step-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #c8dcf5; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 10px; font-size: 26px;
+    }
+    .step-label { font-size: 12px; font-weight: 700; color: #1a4fa0; line-height: 1.4; }
+    .process-arrow { color: #aab8d0; font-size: 20px; flex-shrink: 0; padding: 0 2px; margin-bottom: 24px; }
+
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 20px 0; }
