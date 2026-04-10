@@ -1,3 +1,3 @@
 @echo off
 cd /d "%~dp0"
-npx serve . --no-clipboard
+npx serve . -l 3001 --no-clipboard

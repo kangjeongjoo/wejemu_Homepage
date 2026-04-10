@@ -10,7 +10,7 @@
 
 \- 이미지는 img/ 폴더에 저장
 
-\- 로컬서버: localhost:3000
+\- 로컬서버: localhost:3001
 
 
 
@@ -116,11 +116,11 @@ wejemu Homepage/
 
 \## 로컬 개발 환경
 
-\- 로컬 서버: `localhost:3000` (npx serve 사용)
+\- 로컬 서버: `localhost:3001` (npx serve 사용)
 
 \- serve.bat 실행으로 서버 시작
 
-\- Git 저장소: https://github.com/kangjeongjoo/wejemu-homepage
+\- Git 저장소: https://github.com/kangjeongjoo/wejemu_Homepage
 
 \- 메인 브랜치: main
 
