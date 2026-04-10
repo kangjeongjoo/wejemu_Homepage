@@ -380,58 +380,7 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <div class="footer-logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="footer-logo-text">재무<span>ERP</span></div>
-      </div>
-      <p>중견·중소기업을 위한<br>통합 재무관리 ERP 솔루션</p>
-      <div class="footer-social">
-        <a href="#" class="social-btn">B</a>
-        <a href="#" class="social-btn">C</a>
-        <a href="#" class="social-btn">f</a>
-      </div>
-    </div>
 
-    <div class="footer-links-group">
-      <div class="footer-col">
-        <h4>상품</h4>
-        <ul>
-          <li><a href="erp-lite.html">재무ERPLite</a></li>
-          <li><a href="erp.html">재무ERP</a></li>
-          <li><a href="sanerp.html">산학ERP</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>모듈</h4>
-        <ul>
-          <li><a href="#">회계관리</a></li>
-          <li><a href="#">인사급여</a></li>
-          <li><a href="#">예산관리</a></li>
-          <li><a href="#">AI 에이전트</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>고객지원</h4>
-        <ul>
-          <li><a href="#">공지사항</a></li>
-          <li><a href="#">자주 묻는 질문</a></li>
-          <li><a href="#" onclick="window.open('support-popup.html','원격지원','width=620,height=780,scrollbars=yes,resizable=no');return false;">원격 지원</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-contact">
-      <h4>고객센터</h4>
-      <div class="contact-phone">1600-2617</div>
-      <div class="contact-hours">
-        월~금 09:00 ~ 19:00<br>
-        토 · 일 · 공휴일 휴무
-      </div>
-      <a href="#" class="btn btn-outline" style="font-size:13px;padding:8px 16px;" onclick="openModal();return false;">방문상담 신청</a>
-    </div>
   </div>
 
   <div class="footer-bottom">
@@ -452,6 +401,20 @@
 </footer>
 
 <script>
+  function switchBoardTab(btn, panelId) {
+    document.querySelectorAll('.board-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.board-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+  function switchFilter(btn, panelId) {
+    document.getElementById(panelId).querySelectorAll('.board-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  function toggleFaq(qEl) {
+    qEl.classList.toggle('open');
+    qEl.nextElementSibling.classList.toggle('open');
+  }
   function openModal() {
     document.getElementById('consultModal').classList.add('open');
     document.body.style.overflow = 'hidden';

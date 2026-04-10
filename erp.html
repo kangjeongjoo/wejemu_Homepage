@@ -327,6 +327,71 @@
   </div>
 </section>
 
+<!-- ===== BOARD (NOTICE / FAQ / GUIDE) ===== -->
+<section class="board-section">
+  <div class="section-inner">
+    <div class="board-tab-nav">
+      <button class="board-tab-btn active" onclick="switchBoardTab(this,'board-notice')">공지사항</button>
+      <button class="board-tab-btn" onclick="switchBoardTab(this,'board-faq')">FAQ</button>
+      <button class="board-tab-btn" onclick="switchBoardTab(this,'board-guide')">기초사용법</button>
+    </div>
+    <div class="board-panel active" id="board-notice">
+      <div class="board-toolbar">
+        <div class="board-filters">
+          <button class="board-filter active" onclick="switchFilter(this,'board-notice')">공통</button>
+          <button class="board-filter" onclick="switchFilter(this,'board-notice')">기업</button>
+          <button class="board-filter" onclick="switchFilter(this,'board-notice')">기타</button>
+        </div>
+        <div class="board-search">
+          <input type="text" placeholder="검색어를 입력하세요.">
+          <button type="button"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="17" y2="17"/></svg></button>
+        </div>
+      </div>
+      <div class="board-list">
+        <div class="board-row"><span class="board-num"><em class="badge-important">중요</em></span><span class="board-title">★프로그램 설치 및 사업장정보 입력 안내★</span><span class="board-attach"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="1.8" width="17" height="17"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></span><span class="board-date">2025-11-03</span></div>
+        <div class="board-row"><span class="board-num">140</span><span class="board-title">2026년 03월 1차 업데이트 공지입니다</span><span class="board-attach"></span><span class="board-date">2026-03-03</span></div>
+        <div class="board-row"><span class="board-num">139</span><span class="board-title">[국세청공지] 거주자기타소득지급명세서 신고관련 홈택스 안내</span><span class="board-attach"></span><span class="board-date">2026-02-09</span></div>
+        <div class="board-row"><span class="board-num">138</span><span class="board-title">2026년 01월 3차 업데이트 공지입니다</span><span class="board-attach"></span><span class="board-date">2026-01-16</span></div>
+        <div class="board-row"><span class="board-num">137</span><span class="board-title">2026년 01월 2차 업데이트 공지입니다</span><span class="board-attach"></span><span class="board-date">2026-01-12</span></div>
+        <div class="board-row"><span class="board-num">136</span><span class="board-title">2025년 귀속 연말정산 교육자료/동영상_F</span><span class="board-attach"><svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="1.8" width="17" height="17"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></span><span class="board-date">2026-01-02</span></div>
+        <div class="board-row"><span class="board-num">135</span><span class="board-title">2026년 01월 업데이트 공지입니다</span><span class="board-attach"></span><span class="board-date">2026-01-02</span></div>
+        <div class="board-row"><span class="board-num">134</span><span class="board-title">2025년 귀속 연말정산 프로그램 설명회 안내</span><span class="board-attach"></span><span class="board-date">2025-12-11</span></div>
+        <div class="board-row"><span class="board-num">133</span><span class="board-title">※ TaxBill365 시스템 작업으로 일시중지 안내(12/20)</span><span class="board-attach"></span><span class="board-date">2025-12-09</span></div>
+        <div class="board-row"><span class="board-num">132</span><span class="board-title">※ 국세청 홈택스 시스템 점검에 따른 서비스 일시 단단(11/27~28)</span><span class="board-attach"></span><span class="board-date">2025-11-25</span></div>
+      </div>
+      <div class="board-pagination">
+        <button class="page-nav">«</button><button class="page-nav">‹</button>
+        <button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><button class="page-btn">4</button><button class="page-btn">5</button><button class="page-btn">6</button><button class="page-btn">7</button><button class="page-btn">8</button><button class="page-btn">9</button><button class="page-btn">10</button>
+        <button class="page-nav">›</button><button class="page-nav">»</button>
+      </div>
+    </div>
+    <div class="board-panel" id="board-faq">
+      <div class="board-toolbar">
+        <div class="board-filters">
+          <button class="board-filter active" onclick="switchFilter(this,'board-faq')">전체</button>
+          <button class="board-filter" onclick="switchFilter(this,'board-faq')">기업</button>
+          <button class="board-filter" onclick="switchFilter(this,'board-faq')">기타</button>
+        </div>
+        <div class="board-search"><input type="text" placeholder="검색어를 입력하세요."><button type="button"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="17" y2="17"/></svg></button></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-label">Q</span><span>재무ERP는 어떻게 도입할 수 있나요?</span><svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><span class="faq-a-label">A</span><span>상담 신청 → 요구사항 분석 → 제안서 발행 → 계약 → 설치 및 교육 순으로 진행됩니다. 상단의 '도입 문의' 버튼 또는 1600-2617로 연락주세요.</span></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-label">Q</span><span>기존 회계 프로그램에서 데이터를 이전할 수 있나요?</span><svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><span class="faq-a-label">A</span><span>네, 가능합니다. 전문 컨설턴트가 기존 데이터를 안전하게 이전해 드리며 더존, 세금e 등 주요 회계 프로그램과의 데이터 연동을 지원합니다.</span></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-label">Q</span><span>뱅킹(브랜치) 연동은 어떻게 설정하나요?</span><svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><span class="faq-a-label">A</span><span>웹케시 브랜치 기업 뱅킹 계정이 있으면 재무ERP 설정 메뉴에서 계좌를 등록하여 바로 연동할 수 있습니다. 자세한 설정은 컨설턴트가 안내해 드립니다.</span></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-label">Q</span><span>고객 지원은 어떻게 받을 수 있나요?</span><svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div><div class="faq-a"><span class="faq-a-label">A</span><span>전화 1600-2617 (월~금 09:00~19:00), 원격 지원, 전국 지사 방문 컨설팅을 제공합니다. 세법 변경 최신화 서비스도 지원합니다.</span></div></div>
+      </div>
+    </div>
+    <div class="board-panel" id="board-guide">
+      <div class="guide-grid">
+        <div class="guide-card"><div class="guide-num">01</div><h3>설치 및 초기 설정</h3><p>프로그램 설치부터 사업장 정보 등록, 기초 코드 설정까지 단계별로 안내합니다.</p><a href="#" class="guide-link">자세히 보기 →</a></div>
+        <div class="guide-card"><div class="guide-num">02</div><h3>회계 전표 입력</h3><p>수동 전표 입력 방법과 증빙 기반 자동 전표 생성 기능 사용법을 안내합니다.</p><a href="#" class="guide-link">자세히 보기 →</a></div>
+        <div class="guide-card"><div class="guide-num">03</div><h3>급여 계산 및 처리</h3><p>인사 정보 등록부터 월급여 계산, 원천세 신고까지의 전체 과정을 설명합니다.</p><a href="#" class="guide-link">자세히 보기 →</a></div>
+        <div class="guide-card"><div class="guide-num">04</div><h3>결산 처리 방법</h3><p>월결산·연결산 처리 순서와 재무제표 출력 방법을 단계별로 안내합니다.</p><a href="#" class="guide-link">자세히 보기 →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section class="cta-section">
   <div class="section-inner">
@@ -413,56 +478,6 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <div class="footer-logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="footer-logo-text">재무<span>ERP</span></div>
-      </div>
-      <p>중소·중견기업을 위한<br>통합 재무관리 ERP 솔루션</p>
-      <div class="footer-social">
-        <a href="#" class="social-btn">B</a>
-        <a href="#" class="social-btn">C</a>
-        <a href="#" class="social-btn">f</a>
-      </div>
-    </div>
-    <div class="footer-links-group">
-      <div class="footer-col">
-        <h4>상품</h4>
-        <ul>
-          <li><a href="erp-lite.html">재무ERPLite</a></li>
-          <li><a href="erp.html">재무ERP</a></li>
-          <li><a href="sanerp.html">산학ERP</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>모듈</h4>
-        <ul>
-          <li><a href="#">인사·급여</a></li>
-          <li><a href="#">회계관리</a></li>
-          <li><a href="#">예산관리</a></li>
-          <li><a href="#">전자결재</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>고객지원</h4>
-        <ul>
-          <li><a href="#">공지사항</a></li>
-          <li><a href="#">자주 묻는 질문</a></li>
-          <li><a href="#" onclick="window.open('support-popup.html','원격지원','width=620,height=780,scrollbars=yes,resizable=no');return false;">원격 지원</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-contact">
-      <h4>고객센터</h4>
-      <div class="contact-phone">1600-2617</div>
-      <div class="contact-hours">
-        월~금 09:00 ~ 19:00<br>
-        토 · 일 · 공휴일 휴무
-      </div>
-      <button class="btn-consult" onclick="openModal()">방문상담 신청</button>
-    </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-info">
@@ -482,6 +497,20 @@
 </footer>
 
 <script>
+  function switchBoardTab(btn, panelId) {
+    document.querySelectorAll('.board-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.board-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+  function switchFilter(btn, panelId) {
+    document.getElementById(panelId).querySelectorAll('.board-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  function toggleFaq(qEl) {
+    qEl.classList.toggle('open');
+    qEl.nextElementSibling.classList.toggle('open');
+  }
   function openModal() {
     document.getElementById('consultModal').classList.add('open');
     document.body.style.overflow = 'hidden';
