@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "서버 시작 (localhost:3000)",
+            "type": "shell",
+            "command": "npx serve . --no-clipboard",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
