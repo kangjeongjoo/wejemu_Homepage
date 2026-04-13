@@ -124,7 +124,7 @@
       background: rgba(255,255,255,.1); backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,.2); border-radius: 16px; padding: 28px;
     }
-    .hero-card-title { font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero-card-title { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.6); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
     .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .hero-stat { background: rgba(255,255,255,.08); border-radius: 10px; padding: 16px; text-align: center; }
     .hero-stat-num { font-size: 40px; font-weight: 900; color: #7eb8ff; line-height: 1; }
@@ -171,6 +171,7 @@
     .target-card {
       border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 20px;
       text-align: center; transition: all .25s; position: relative; overflow: hidden;
+      display: block; text-decoration: none; color: inherit; cursor: pointer;
     }
     .target-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
