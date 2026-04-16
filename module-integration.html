@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>특화ERP 연계 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+    <a href="erp.html">재무ERP</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">특화ERP 연계</span>
+  </div>
+</div>
+
+<section class="module-hero integration" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">🔗</span>특화ERP 연계 모듈</div>
+      <h1>업종별 특화 ERP와<br><em>완벽하게 연결</em>됩니다</h1>
+      <p class="module-hero-desc">
+        건설·제조·유통·공공기관 등 업종별 특화 ERP 시스템과 API 기반으로 연계합니다.<br>
+        재무ERP를 허브로 전사 통합 재무관리 체계를 구현합니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">API</span><span class="hero-stat-label">표준 연계</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">4종</span><span class="hero-stat-label">업종 ERP</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">맞춤</span><span class="hero-stat-label">커스터마이징</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">🔗</span>
+        <div class="icon-title">특화ERP 연계 모듈</div>
+        <div class="icon-sub">건설·제조·유통·공공기관 ERP와<br>API 기반 유연한 연동</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">건설ERP</span>
+          <span class="module-tag-hero">제조ERP</span>
+          <span class="module-tag-hero">유통ERP</span>
+          <span class="module-tag-hero">공공기관ERP</span>
+          <span class="module-tag-hero">API연동</span>
+          <span class="module-tag-hero">커스터마이징</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">특화ERP 연계 핵심 기능</h2>
+      <p class="section-desc">업종별 특화 ERP와의 연계로 전사 통합 재무관리를 실현합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">🏗️</span>
+        <h3>건설ERP 연계</h3>
+        <p>건설ERP의 공사 원가·기성 청구·하도급 계약 데이터를 수신하여 회계 전표를 자동 생성합니다. 공사별 예산 편성부터 실행 현황까지 재무ERP에서 통합 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">공사원가전표</span><span class="func-tag">기성청구</span><span class="func-tag">예산통제</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏭</span>
+        <h3>제조ERP 연계</h3>
+        <p>제조ERP의 생산 실적·자재 투입·원가 계산 데이터를 수신하여 원가 전표를 자동 생성합니다. 제품별·공정별 예산 대비 실적을 재무ERP에서 분석합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">원가전표</span><span class="func-tag">자재비</span><span class="func-tag">예산실적</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🛒</span>
+        <h3>유통ERP 연계</h3>
+        <p>유통ERP의 수주·발주·매입·매출 데이터를 수신하여 회계 전표를 자동 생성합니다. 유통채널별 매출 예산과 매입 집행 현황을 재무ERP에서 통합 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">매출전표</span><span class="func-tag">매입전표</span><span class="func-tag">예산관리</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏛️</span>
+        <h3>공공기관 연계</h3>
+        <p>공공기관ERP의 세입·세출·보조금 집행 데이터를 수신하여 수입·지출 전표를 자동 생성합니다. 예산 과목별 집행 현황과 결산 보고서를 재무ERP에서 통합 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">수입전표</span><span class="func-tag">지출전표</span><span class="func-tag">예산집행</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">⚙️</span>
+        <h3>REST API 표준 연계</h3>
+        <p>REST API 기반의 표준 인터페이스로 어떤 시스템과도 유연하게 연동합니다. JSON 형식의 데이터 교환으로 빠른 연계 구축이 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">REST API</span><span class="func-tag">JSON</span><span class="func-tag">실시간연동</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔧</span>
+        <h3>커스텀 연계 개발</h3>
+        <p>표준 연계 외에도 기업 고유의 레거시 시스템, 그룹웨어, ERP와 맞춤형 연계를 개발합니다. 전문 컨설턴트가 최적의 연계 방식을 제안합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">맞춤연계</span><span class="func-tag">레거시연동</span><span class="func-tag">컨설팅</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">특화ERP 연계 구성도</h2>
+      <p class="section-desc">재무ERP를 허브로 모든 시스템이 연결됩니다.</p>
+    </div>
+
+    <!-- Integration diagram -->
+    <div style="background:#fff; border-radius: 20px; padding: 40px; border: 1.5px solid var(--border); margin-bottom: 40px;">
+      <div style="text-align:center; margin-bottom: 30px;">
+        <div style="display:inline-block; background: var(--primary); color:#fff; border-radius:16px; padding: 20px 40px; font-size:18px; font-weight:800;">
+          🏢 재무ERP (허브)
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🏗️</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">건설ERP 연계</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">공사원가·기성 데이터 →<br>전표 자동생성·예산통제</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">전표자동생성</span>
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">예산통제</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🏭</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">제조ERP 연계</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">생산실적·원가 데이터 →<br>원가전표 자동생성·예산실적</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">전표자동생성</span>
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">예산실적</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🛒</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">유통ERP 연계</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">매입·매출 데이터 →<br>전표 자동생성·예산관리</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">전표자동생성</span>
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">예산관리</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🏛️</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">공공기관ERP 연계</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">세입·세출·보조금 데이터 →<br>수입지출전표 자동생성</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">전표자동생성</span>
+            <span style="font-size:10px; background:var(--primary); color:#fff; padding:2px 8px; border-radius:8px;">예산집행</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🏦</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">뱅킹 연동</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">웹케시 브랜치<br>기업뱅킹 완벽 연동</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--accent); color:#fff; padding:2px 8px; border-radius:8px;">기본제공</span>
+          </div>
+        </div>
+        <div style="background: var(--bg-light); border-radius:14px; padding:20px; text-align:center; border: 1.5px solid var(--border);">
+          <div style="font-size:28px; margin-bottom:8px;">🔧</div>
+          <div style="font-weight:800; color:var(--text-dark); margin-bottom:6px;">커스텀 연계</div>
+          <div style="font-size:12px; color:var(--text-light); line-height:1.6;">레거시·그룹웨어<br>맞춤형 인터페이스 개발</div>
+          <div style="margin-top:10px; display:flex; gap:4px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:10px; background:var(--accent2); color:#fff; padding:2px 8px; border-radius:8px;">컨설팅</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-icon">⚙️</div>
+      <div class="highlight-text">
+        <h3>REST API 기반 표준 연계로 빠르게 연동합니다</h3>
+        <p>재무ERP는 REST API 표준 인터페이스를 제공하여 어떤 시스템과도 신속하게 연동할 수 있습니다. 전문 연계 컨설턴트가 초기 구축을 지원하며 운영 후에도 지속적인 기술 지원을 제공합니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>JSON 기반 REST API로 어떤 플랫폼과도 연동 가능</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>연계 데이터 실시간 동기화 및 오류 모니터링</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>전담 연계 컨설턴트의 초기 구축 및 유지보수 지원</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="module-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">연계 데이터 자동 전표 생성</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-banking.html">
+        <div class="related-card-icon">🏦</div>
+        <div class="related-card-name">뱅킹연동</div>
+        <div class="related-card-desc">뱅킹 데이터 통합 관리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-ai.html">
+        <div class="related-card-icon">🤖</div>
+        <div class="related-card-name">AI에이전트</div>
+        <div class="related-card-desc">연계 데이터 AI 자동 분류</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-budget.html">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-name">예산관리</div>
+        <div class="related-card-desc">프로젝트별 예산·원가 통합</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">🔗 특화ERP 연계 모듈</div>
+    <h2>사용 중인 ERP 시스템과<br>재무ERP를 연결하세요</h2>
+    <p>전문 연계 컨설턴트가 귀사 시스템에 최적화된 연계 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

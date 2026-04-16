@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연구과제 모듈 - 산학ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="sanerp.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">산학<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <div class="breadcrumb-path">
+      <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+      <a href="sanerp.html">산학ERP</a>
+    </div>
+    <div class="breadcrumb-modules">
+        <a href="sanerp-budget.html" class="bc-module"><span class="bc-module-icon">📊</span>예산관리</a>
+        <a href="sanerp-accounting.html" class="bc-module"><span class="bc-module-icon">📒</span>회계관리</a>
+        <a href="sanerp-hr.html" class="bc-module"><span class="bc-module-icon">👥</span>인사·급여</a>
+        <a href="sanerp-research.html" class="bc-module active"><span class="bc-module-icon">🔬</span>연구과제</a>
+        <a href="sanerp-university.html" class="bc-module"><span class="bc-module-icon">🏛️</span>대학연계</a>
+    </div>
+  </div>
+</div>
+
+<section class="module-hero" style="padding:80px 24px 70px; background:linear-gradient(135deg,#0a1a3a 0%,#1a3a7a 50%,#2a5ab0 100%);">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">🔬</span>연구과제 모듈</div>
+      <h1>연구비 관리를<br><em>RERP와 완벽하게 자동 연계</em></h1>
+      <p class="module-hero-desc">
+        웹케시 연구과제관리시스템(RERP)과 실시간 자동 연계됩니다.<br>
+        연구비 지출 증빙이 발생하는 즉시 회계 전표가 자동 생성되어 이중 입력이 완전히 사라집니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">RERP 연계</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">실시간</span><span class="hero-stat-label">전표 생성</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">과제별</span><span class="hero-stat-label">예산 통제</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">🔬</span>
+        <div class="icon-title">연구과제 모듈</div>
+        <div class="icon-sub">RERP 연계부터 과제별 예산 관리,<br>부가세 신고까지 통합 처리</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">RERP 연계</span>
+          <span class="module-tag-hero">연구비 관리</span>
+          <span class="module-tag-hero">과제 예산</span>
+          <span class="module-tag-hero">인건비 배분</span>
+          <span class="module-tag-hero">부가세 신고</span>
+          <span class="module-tag-hero">원천징수</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">연구과제 핵심 기능</h2>
+      <p class="section-desc">산학협력단의 연구비 관리 업무를 자동화하여 행정 부담을 획기적으로 줄입니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">🔗</span>
+        <h3>RERP 자동 연계</h3>
+        <p>웹케시 연구과제관리시스템(RERP)과 실시간으로 자동 연계됩니다. 연구비 지출 증빙이 발생하는 즉시 산학ERP 회계전표에 자동 반영되어 이중 입력이 완전히 사라집니다.</p>
+        <div class="func-card-tags"><span class="func-tag">실시간연계</span><span class="func-tag">이중입력제거</span><span class="func-tag">자동전표</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>과제별 예산 관리</h3>
+        <p>과제별·비목별 연구비 예산을 편성하고 집행 현황을 실시간으로 모니터링합니다. 예산 초과 시 자동 알림과 집행 차단으로 연구비 집행의 투명성을 높입니다.</p>
+        <div class="func-card-tags"><span class="func-tag">과제별예산</span><span class="func-tag">비목관리</span><span class="func-tag">초과차단</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">👨‍🔬</span>
+        <h3>연구인력 인건비 관리</h3>
+        <p>연구 참여 인력의 과제별 참여율에 따른 인건비를 자동으로 배분합니다. 학생인건비, 연구보조원 인건비 등 다양한 인건비 유형을 체계적으로 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">참여율배분</span><span class="func-tag">학생인건비</span><span class="func-tag">자동배분</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🧾</span>
+        <h3>부가세 전자신고</h3>
+        <p>연구과제에서 발생하는 모든 증빙(세금계산서, 카드매출, 현금영수증)을 자동 집계하여 부가세 전자신고를 지원합니다. 신고 오류 없이 정확하고 빠른 신고가 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자동집계</span><span class="func-tag">전자신고</span><span class="func-tag">세금계산서</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📑</span>
+        <h3>연구비 정산 보고서</h3>
+        <p>과제 종료 시 관리 기관에 제출하는 연구비 정산 보고서를 자동으로 생성합니다. 비목별 집행 내역, 증빙 목록, 잔액 현황을 일괄 출력할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">정산보고서</span><span class="func-tag">비목별집행</span><span class="func-tag">자동출력</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏦</span>
+        <h3>연구비 전용 계좌 관리</h3>
+        <p>과제별로 개설된 연구비 전용 계좌의 입출금 내역을 실시간으로 수집합니다. 계좌 잔액과 집행 현황을 과제별로 분리하여 명확하게 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">전용계좌</span><span class="func-tag">실시간수집</span><span class="func-tag">과제분리</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">연구과제 업무 흐름</h2>
+      <p class="section-desc">RERP 연계부터 정산 보고서까지 자동으로 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">🔬</div>
+        <h4>과제 등록</h4>
+        <p>RERP에서 연구과제 정보 및 예산 등록</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">🧾</div>
+        <h4>증빙 자동 수집</h4>
+        <p>연구비 지출 증빙 발생 즉시 자동 수집</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">📒</div>
+        <h4>전표 자동 생성</h4>
+        <p>산학ERP 회계전표 자동 생성·반영</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">📊</div>
+        <h4>예산 현황 모니터링</h4>
+        <p>과제별 예산 대비 집행 현황 실시간 확인</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📑</div>
+        <h4>정산 보고서</h4>
+        <p>과제 종료 시 정산 보고서 자동 생성</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🔗</div>
+      <div class="highlight-text">
+        <h3>RERP와 실시간으로 자동 연계됩니다</h3>
+        <p>웹케시 연구과제관리시스템(RERP)에서 발생하는 모든 연구비 지출 증빙이 산학ERP 회계전표에 자동으로 반영됩니다. 이중 입력이 없어지고 데이터 오류가 원천 차단됩니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>RERP 지출 발생 즉시 산학ERP 회계전표 자동 생성</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>세금계산서·카드·현금영수증 증빙 유형별 자동 분류</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>과제별 수입·지출 현황이 재무제표에 실시간 반영</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="sanerp-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">연구비 전표 자동 반영</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-budget.html">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-name">예산관리</div>
+        <div class="related-card-desc">과제별 예산 통제·모니터링</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">연구인력 인건비 배분 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-university.html">
+        <div class="related-card-icon">🏛️</div>
+        <div class="related-card-name">대학연계</div>
+        <div class="related-card-desc">대학 행정시스템 연계</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">🔬 연구과제 모듈</div>
+    <h2>연구비 관리를<br>자동화하세요</h2>
+    <p>전문 컨설턴트가 귀 기관의 연구과제 관리 환경에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="sanerp.html" class="btn-cta-outline">산학ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">산학ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>산학ERP 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">기관명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="기관명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

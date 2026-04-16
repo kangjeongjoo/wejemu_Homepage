@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>예산관리 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+    <a id="bc-product" href="erp.html">재무ERP</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">예산관리</span>
+  </div>
+</div>
+
+<section class="module-hero budget" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">📊</span>예산관리 모듈</div>
+      <h1>예산 편성부터 집행 통제까지<br><em>실시간으로 관리</em></h1>
+      <p class="module-hero-desc">
+        부서별·프로젝트별 예산을 편성하고 집행 현황을 실시간으로 모니터링합니다.<br>
+        예산 초과 시 자동 알림과 결재 프로세스로 재무 규율을 강화합니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">실시간</span><span class="hero-stat-label">집행 모니터링</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">초과 알림</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">분석</span><span class="hero-stat-label">예실 비교</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">📊</span>
+        <div class="icon-title">예산관리 모듈</div>
+        <div class="icon-sub">예산 편성·배정·집행·분석까지<br>재무 규율을 자동으로 관리</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">예산편성</span>
+          <span class="module-tag-hero">집행관리</span>
+          <span class="module-tag-hero">실적분석</span>
+          <span class="module-tag-hero">초과승인</span>
+          <span class="module-tag-hero">부서별관리</span>
+          <span class="module-tag-hero">프로젝트별</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">예산관리 핵심 기능</h2>
+      <p class="section-desc">체계적인 예산 관리로 기업의 재무 규율과 효율성을 높입니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">📋</span>
+        <h3>예산 편성</h3>
+        <p>부서별·계정별·프로젝트별로 연간 예산을 편성합니다. 전기 실적 기반으로 예산안을 자동으로 제안하여 편성 작업 시간을 줄입니다.</p>
+        <div class="func-card-tags"><span class="func-tag">부서별</span><span class="func-tag">계정별</span><span class="func-tag">프로젝트별</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📆</span>
+        <h3>예산 배정</h3>
+        <p>연간 예산을 월별·분기별로 자동 배정합니다. 계절성·사업계획을 반영한 비균등 배정도 지원하여 합리적인 예산 운용이 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">월별배정</span><span class="func-tag">분기별</span><span class="func-tag">비균등배정</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📈</span>
+        <h3>집행 현황 모니터링</h3>
+        <p>전표 처리와 동시에 예산 집행률이 실시간으로 갱신됩니다. 부서별·계정별 집행 현황을 대시보드로 한눈에 파악할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">실시간갱신</span><span class="func-tag">대시보드</span><span class="func-tag">집행률</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🚨</span>
+        <h3>예산 초과 통제</h3>
+        <p>예산 잔액이 기준치 이하로 떨어지면 담당자에게 즉시 알림을 발송합니다. 초과 지출 시 결재 프로세스를 자동으로 연동하여 통제합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">임계값알림</span><span class="func-tag">초과결재</span><span class="func-tag">통제설정</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔄</span>
+        <h3>예산 이월·전용</h3>
+        <p>부서 간 예산 전용 및 차기 연도 이월을 처리합니다. 전용·이월 시 전자결재를 통한 승인 프로세스가 자동으로 연동됩니다.</p>
+        <div class="func-card-tags"><span class="func-tag">예산전용</span><span class="func-tag">이월처리</span><span class="func-tag">결재연동</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📉</span>
+        <h3>예실 분석 리포트</h3>
+        <p>예산 대비 실적을 부서별·계정별·기간별로 분석한 리포트를 자동 생성합니다. 경영진을 위한 요약 보고서도 한 번에 출력 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">예실비교</span><span class="func-tag">분산분석</span><span class="func-tag">경영보고</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">예산 관리 업무 흐름</h2>
+      <p class="section-desc">예산 편성부터 분석까지 체계적인 예산 관리 사이클을 지원합니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">📋</div>
+        <h4>예산 편성</h4>
+        <p>부서·계정·프로젝트별 연간 예산안 작성</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>예산 심의·확정</h4>
+        <p>전자결재를 통한 예산안 승인 프로세스</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">📆</div>
+        <h4>월별 배정</h4>
+        <p>확정 예산의 월별·분기별 자동 배정</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">📈</div>
+        <h4>집행 모니터링</h4>
+        <p>전표 연동으로 실시간 집행률 관리</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📉</div>
+        <h4>예실 분석</h4>
+        <p>예산 대비 실적 분석 및 경영 보고</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🚨</div>
+      <div class="highlight-text">
+        <h3>예산 초과를 사전에 방지합니다</h3>
+        <p>예산 잔액이 설정된 임계치에 도달하면 담당자와 관리자에게 즉시 알림을 발송합니다. 초과 집행 시에는 자동으로 결재 프로세스가 연동되어 통제됩니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>잔액 기준 80%·100% 도달 시 자동 알림</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>초과 지출 시 전자결재 자동 연동으로 승인 통제</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>부서장·CFO에게 실시간 대시보드로 현황 공유</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+      <p class="section-desc">예산관리 모듈과 함께 사용하면 더욱 강력해집니다.</p>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="module-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">전표 연동으로 실시간 집행 반영</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-approval.html">
+        <div class="related-card-icon">✅</div>
+        <div class="related-card-name">전자결재</div>
+        <div class="related-card-desc">예산 초과 시 자동 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-ai.html">
+        <div class="related-card-icon">🤖</div>
+        <div class="related-card-name">AI에이전트</div>
+        <div class="related-card-desc">AI 기반 예산 분석 리포트</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-mobile.html">
+        <div class="related-card-icon">📱</div>
+        <div class="related-card-name">모바일</div>
+        <div class="related-card-desc">모바일로 예산 현황 실시간 확인</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">📊 예산관리 모듈</div>
+    <h2>예산 초과 없는<br>스마트한 재무 관리를 시작하세요</h2>
+    <p>전문 컨설턴트가 귀사의 예산 관리 체계에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a id="cta-back" href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script src="js/module-context.js"></script>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전자결재 모듈 - 재무ERPLite</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="erp-lite.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERPLite</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <div class="breadcrumb-path">
+      <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+      <a href="erp-lite.html">재무ERPLite</a>
+    </div>
+    <div class="breadcrumb-modules">
+        <a href="erp-lite-sales.html" class="bc-module"><span class="bc-module-icon">🛒</span>영업·물류</a>
+        <a href="erp-lite-accounting.html" class="bc-module"><span class="bc-module-icon">📒</span>회계관리</a>
+        <a href="erp-lite-hr.html" class="bc-module"><span class="bc-module-icon">👥</span>인사·급여</a>
+        <a href="erp-lite-funds.html" class="bc-module"><span class="bc-module-icon">💳</span>자금관리</a>
+        <a href="erp-lite-approval.html" class="bc-module active"><span class="bc-module-icon">✅</span>전자결재</a>
+        <a href="erp-lite-mobile.html" class="bc-module"><span class="bc-module-icon">📱</span>모바일</a>
+    </div>
+  </div>
+</div>
+
+<section class="module-hero" style="padding:80px 24px 70px; background:linear-gradient(135deg,#0a3a1a 0%,#1a7040 50%,#2a9a50 100%);">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">✅</span>전자결재 모듈</div>
+      <h1>결재 때문에 기다리는<br><em>시간을 없애세요</em></h1>
+      <p class="module-hero-desc">
+        인사·회계·자금 관련 모든 문서를 전자결재로 처리합니다.<br>
+        모바일에서도 즉시 결재할 수 있어 업무 지연이 사라집니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">유연한</span><span class="hero-stat-label">결재선설정</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">모바일</span><span class="hero-stat-label">즉시결재</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">알림발송</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">✅</span>
+        <div class="icon-title">전자결재 모듈</div>
+        <div class="icon-sub">결재 양식부터 모바일 결재까지<br>기업 전자결재 업무 완전 자동화</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">결재양식</span>
+          <span class="module-tag-hero">결재선설정</span>
+          <span class="module-tag-hero">모바일결재</span>
+          <span class="module-tag-hero">위임결재</span>
+          <span class="module-tag-hero">결재현황</span>
+          <span class="module-tag-hero">알림이력</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">전자결재 핵심 기능</h2>
+      <p class="section-desc">결재 업무를 디지털화하여 업무 지연과 오류를 완전히 제거합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">📄</span>
+        <h3>다양한 결재 양식</h3>
+        <p>인사·회계·자금·총무 분야 결재 양식을 기본으로 제공합니다. 회사 맞춤 양식을 추가 생성하여 모든 업무 문서를 전자결재로 처리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">기본양식</span><span class="func-tag">맞춤양식</span><span class="func-tag">양식관리</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔀</span>
+        <h3>유연한 결재선</h3>
+        <p>문서 종류별 결재선을 자유롭게 설정합니다. 순차·병렬 결재를 모두 지원하여 회사의 결재 구조에 맞게 유연하게 구성할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">결재선설정</span><span class="func-tag">순차결재</span><span class="func-tag">병렬결재</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📱</span>
+        <h3>모바일 결재</h3>
+        <p>스마트폰으로 결재함을 확인하고 즉시 처리합니다. 첨부파일을 확인한 후 바로 승인·반려할 수 있어 업무 지연이 사라집니다.</p>
+        <div class="func-card-tags"><span class="func-tag">모바일</span><span class="func-tag">즉시결재</span><span class="func-tag">첨부확인</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔄</span>
+        <h3>위임·대리 결재</h3>
+        <p>출장·휴가 중 다른 담당자에게 결재를 위임합니다. 위임 기간과 범위를 세밀하게 설정하여 업무 공백을 방지합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">위임결재</span><span class="func-tag">대리결재</span><span class="func-tag">기간설정</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>결재 현황 모니터링</h3>
+        <p>진행 중·완료·반려 결재 현황을 한눈에 파악합니다. 부서별·사용자별 통계로 결재 처리 지연 현황을 즉시 확인할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">진행현황</span><span class="func-tag">통계</span><span class="func-tag">부서별</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔔</span>
+        <h3>알림·이력 추적</h3>
+        <p>결재 요청·승인·반려 알림을 즉시 발송합니다. 전체 결재 이력을 영구 보관하여 감사 추적과 법적 증빙 자료로 활용할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">즉시알림</span><span class="func-tag">이력보관</span><span class="func-tag">감사추적</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">전자결재 업무 흐름</h2>
+      <p class="section-desc">결재 문서 작성부터 회계 자동 연동까지 원스톱으로 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">📄</div>
+        <h4>결재문서작성</h4>
+        <p>전자결재 양식 선택 후 내용 입력</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">🔀</div>
+        <h4>결재선지정</h4>
+        <p>문서 유형에 맞는 결재선 자동 적용</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">🔔</div>
+        <h4>결재요청</h4>
+        <p>결재자에게 Push 알림 즉시 발송</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">📱</div>
+        <h4>모바일승인</h4>
+        <p>모바일에서 즉시 확인 후 승인 처리</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📒</div>
+        <h4>회계자동연동</h4>
+        <p>승인 완료 즉시 회계 전표 자동 생성</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🔗</div>
+      <div class="highlight-text">
+        <h3>결재 완료 즉시 회계 처리까지 자동 연동됩니다</h3>
+        <p>결재 승인과 동시에 회계 전표가 자동으로 생성됩니다. 자금이체 결재는 즉시 이체 처리까지 연결되어 결재와 실행 사이의 간격을 없앱니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>결재→전표 자동생성</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>자금이체결재→즉시이체처리</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>모든결재이력 법적 보관기간 유지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+      <p class="section-desc">전자결재 모듈과 함께 사용하면 더욱 강력해집니다.</p>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="erp-lite-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">급여대장 결재</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">결의서 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-funds.html">
+        <div class="related-card-icon">💳</div>
+        <div class="related-card-name">자금관리</div>
+        <div class="related-card-desc">이체 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-mobile.html">
+        <div class="related-card-icon">📱</div>
+        <div class="related-card-name">모바일</div>
+        <div class="related-card-desc">모바일 결재</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">✅ 전자결재 모듈</div>
+    <h2>결재 대기 시간을<br>없애세요</h2>
+    <p>전문 컨설턴트가 귀사의 업무에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="erp-lite.html" class="btn-cta-outline">재무ERPLite 전체 보기</a>
+    </div>
+  </div>
+</section>
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERPLite</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERPLite 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

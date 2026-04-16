@@ -166,22 +166,43 @@
     .intro-card p { font-size: 15px; color: var(--text-mid); line-height: 1.8; }
 
     /* ===== Target Customers ===== */
-    .targets { background: var(--white); }
-    .target-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .targets { background: #f4f7fb; }
+    .target-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .target-card {
-      border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px 20px;
-      text-align: center; transition: all .25s; position: relative; overflow: hidden;
-      display: block; text-decoration: none; color: inherit; cursor: pointer;
+      border-radius: 16px; padding: 36px 28px 28px;
+      text-align: center; transition: all .3s; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; text-decoration: none; color: inherit; cursor: pointer;
+      background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border-top: 5px solid transparent;
     }
-    .target-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: var(--primary); transform: scaleX(0); transition: transform .25s; transform-origin: left;
+    .target-card--lite  { border-top-color: #2563eb; }
+    .target-card--erp   { border-top-color: #1a4fa0; }
+    .target-card--sanerp { border-top-color: #0d9488; }
+    .target-card:hover  { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.13); }
+    .target-card-badge {
+      display: inline-block; font-size: 15px; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 12px; border-radius: 20px; margin-bottom: 16px;
+      background: #eef2ff; color: #1a4fa0;
     }
-    .target-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-3px); }
-    .target-card:hover::before { transform: scaleX(1); }
-    .target-icon { font-size: 40px; margin-bottom: 14px; }
-    .target-card h3 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
-    .target-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+    .target-card--sanerp .target-card-badge { background: #f0fdfa; color: #0d9488; }
+    .target-icon { font-size: 48px; margin-bottom: 12px; }
+    .target-card h3 { font-size: 22px; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
+    .target-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.75; margin-bottom: 20px; }
+    .target-features {
+      list-style: none; padding: 0; margin: 0 0 24px; text-align: left;
+      border-top: 1px solid #f0f0f0; padding-top: 16px;
+    }
+    .target-features li {
+      font-size: 13px; color: #374151; padding: 5px 0 5px 20px; position: relative; line-height: 1.5;
+    }
+    .target-features li::before { content: '✓'; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
+    .target-card--sanerp .target-features li::before { color: #0d9488; }
+    .target-cta {
+      margin-top: auto; font-size: 14px; font-weight: 700; color: #2563eb;
+      padding: 10px 0 0; border-top: 1px solid #eef2ff; transition: gap .2s;
+    }
+    .target-card--sanerp .target-cta { color: #0d9488; border-top-color: #f0fdfa; }
+    .target-card:hover .target-cta { text-decoration: underline; }
 
     /* ===== Modules ===== */
     .modules { background: var(--bg-light); }

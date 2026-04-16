@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인사·급여 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta">
+      <a href="login.html" target="login_page" class="btn-login">로그인</a>
+      <button class="btn-consult" onclick="openModal()">도입 문의</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a>
+    <span class="breadcrumb-sep">›</span>
+    <a id="bc-product" href="erp.html">재무ERP</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">인사·급여</span>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="module-hero hr" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge">
+        <span class="module-hero-icon-inline">👥</span>
+        인사·급여 모듈
+      </div>
+      <h1>인사·급여 업무를<br><em>하나의 화면</em>에서</h1>
+      <p class="module-hero-desc">
+        임직원 기본정보 관리부터 급여 자동 계산, 4대 보험, 퇴직금 정산, 연말정산까지<br>
+        인사·급여 업무 전반을 자동화하여 담당자의 업무 부담을 획기적으로 줄입니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">자동화</span>
+          <span class="hero-stat-label">급여 계산</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">4대</span>
+          <span class="hero-stat-label">보험 관리</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">연동</span>
+          <span class="hero-stat-label">세무 신고</span>
+        </div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">👥</span>
+        <div class="icon-title">인사·급여 모듈</div>
+        <div class="icon-sub">임직원 관리부터 연말정산까지<br>HR 업무 전 과정을 자동화</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">임직원관리</span>
+          <span class="module-tag-hero">급여계산</span>
+          <span class="module-tag-hero">4대보험</span>
+          <span class="module-tag-hero">퇴직금</span>
+          <span class="module-tag-hero">연말정산</span>
+          <span class="module-tag-hero">원천징수</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY FUNCTIONS ===== -->
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">인사·급여 핵심 기능</h2>
+      <p class="section-desc">복잡한 인사·급여 업무를 체계적으로 자동화하여 오류 없는 HR 관리를 실현합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">🏢</span>
+        <h3>인사 기본관리</h3>
+        <p>임직원 인사카드, 조직도, 직책·직급·직위 체계를 관리합니다. 부서 이동, 승진, 겸직 등 인사 이력을 자동으로 기록합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">인사카드</span>
+          <span class="func-tag">조직도</span>
+          <span class="func-tag">인사이력</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💰</span>
+        <h3>급여 자동 계산</h3>
+        <p>기본급, 수당, 공제 항목을 개인별로 설정하면 월급여를 자동 계산합니다. 시급·일급·성과급 등 다양한 급여 유형을 지원합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">월급여</span>
+          <span class="func-tag">시급·일급</span>
+          <span class="func-tag">성과급</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏥</span>
+        <h3>4대 보험 관리</h3>
+        <p>건강보험·국민연금·고용보험·산재보험의 자격 취득·상실·변경 신고와 보험료 납부를 자동으로 처리합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">건강보험</span>
+          <span class="func-tag">국민연금</span>
+          <span class="func-tag">고용보험</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📋</span>
+        <h3>퇴직금 관리</h3>
+        <p>DB형·DC형 퇴직연금 관리 및 중간정산을 지원합니다. 퇴직금 자동 계산으로 정확한 정산을 보장합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">DB형</span>
+          <span class="func-tag">DC형</span>
+          <span class="func-tag">중간정산</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📝</span>
+        <h3>연말정산</h3>
+        <p>소득공제·세액공제 항목을 자동으로 수집하고 환급액을 계산합니다. 연말정산 간소화 서비스와 연동하여 작업 시간을 단축합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">소득공제</span>
+          <span class="func-tag">세액공제</span>
+          <span class="func-tag">환급 계산</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>원천징수 신고</h3>
+        <p>원천세 신고서를 자동 생성하고 홈택스 연동으로 간편하게 신고합니다. 이자·배당·기타소득 원천징수도 지원합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">원천세</span>
+          <span class="func-tag">홈택스연동</span>
+          <span class="func-tag">지급명세서</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKFLOW ===== -->
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">급여 처리 업무 흐름</h2>
+      <p class="section-desc">인사 등록부터 급여 이체까지 전 과정이 자동화됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">🏢</div>
+        <h4>인사 정보 등록</h4>
+        <p>입사자 기본정보, 급여 조건, 4대보험 정보 등록</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">📅</div>
+        <h4>근태 집계</h4>
+        <p>출퇴근 기록, 연차·휴가 사용 현황 자동 집계</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">💰</div>
+        <h4>급여 자동 계산</h4>
+        <p>기본급·수당·공제항목 자동 계산, 검토 및 확정</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>전자결재 승인</h4>
+        <p>급여 대장 결재 프로세스 자동 연동</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">🏦</div>
+        <h4>급여 이체</h4>
+        <p>뱅킹 연동으로 임직원 계좌 일괄 이체 처리</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🤖</div>
+      <div class="highlight-text">
+        <h3>AI가 급여 계산 오류를 자동으로 감지합니다</h3>
+        <p>급여 계산 결과를 AI가 전월 대비 분석하여 비정상적인 변동을 자동으로 감지하고 담당자에게 알립니다. 실수로 인한 급여 오지급 사고를 사전에 예방합니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>전월 대비 급여 변동률 이상 감지 자동 알림</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>4대 보험료 자동 검증 및 오류 항목 표시</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>세법 변경 시 자동 업데이트로 항상 최신 기준 유지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RELATED MODULES ===== -->
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+      <p class="section-desc">인사·급여 모듈과 함께 사용하면 더욱 강력해집니다.</p>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="module-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">급여 전표 자동 생성</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-banking.html">
+        <div class="related-card-icon">🏦</div>
+        <div class="related-card-name">뱅킹연동</div>
+        <div class="related-card-desc">급여 일괄 이체 처리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-approval.html">
+        <div class="related-card-icon">✅</div>
+        <div class="related-card-name">전자결재</div>
+        <div class="related-card-desc">급여 대장 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-mobile.html">
+        <div class="related-card-icon">📱</div>
+        <div class="related-card-name">모바일</div>
+        <div class="related-card-desc">급여명세서 모바일 조회</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">👥 인사·급여 모듈</div>
+    <h2>인사·급여 업무, 지금보다<br>훨씬 쉽게 처리하세요</h2>
+    <p>전문 컨설턴트가 귀사의 인사·급여 업무에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a id="cta-back" href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOATING SIDEBAR ===== -->
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#">
+    <div class="float-btn-icon">📞</div>
+    <div class="float-btn-label">신규가입<br>상담신청</div>
+    <div class="float-btn-num">1600-2617</div>
+  </a>
+  <a class="float-btn" href="partnership.html">
+    <div class="float-btn-icon">🤝</div>
+    <div class="float-btn-label">제휴 문의</div>
+  </a>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info">
+      <strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>
+      통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>
+      이메일 : serp@webcash.co.kr
+    </div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/module-context.js"></script>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

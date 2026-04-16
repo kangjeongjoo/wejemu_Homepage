@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전자결재 모듈 - 산학ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">산학<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+    <a href="sanerp.html">산학ERP</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">전자결재</span>
+  </div>
+</div>
+
+<section class="module-hero" style="padding:80px 24px 70px; background:linear-gradient(135deg,#0a3a1a 0%,#1a7040 50%,#2a9a50 100%);">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">✅</span>전자결재 모듈</div>
+      <h1>연구비 지출결의부터<br><em>모든 문서를 전자결재로</em></h1>
+      <p class="module-hero-desc">
+        연구비 지출결의서, 출장신청서, 인건비 지급 서류 등 산학협력단 내 모든 문서를 전자결재로 처리합니다.<br>
+        모바일에서도 즉시 결재가 가능합니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">유연한</span><span class="hero-stat-label">결재선설정</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">모바일</span><span class="hero-stat-label">즉시결재</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">회계연동</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">✅</span>
+        <div class="icon-title">전자결재 모듈</div>
+        <div class="icon-sub">지출결의서부터 출장·인건비 결재까지<br>모바일로 즉시 처리</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">지출결의서</span>
+          <span class="module-tag-hero">출장신청</span>
+          <span class="module-tag-hero">인건비결재</span>
+          <span class="module-tag-hero">결재선설정</span>
+          <span class="module-tag-hero">모바일결재</span>
+          <span class="module-tag-hero">문서보관</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">전자결재 핵심 기능</h2>
+      <p class="section-desc">산학협력단 업무에 특화된 전자결재 시스템으로 모든 문서 처리를 디지털화합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">📄</span>
+        <h3>연구비 지출결의서</h3>
+        <p>연구비 지출 결의서를 표준 양식으로 작성하고 관리합니다. 증빙 첨부와 과제 계정이 자동으로 연동되어 정확하고 빠른 결의서 작성이 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">지출결의서</span><span class="func-tag">증빙첨부</span><span class="func-tag">과제연동</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">✈️</span>
+        <h3>출장신청서</h3>
+        <p>국내·해외 출장 신청 및 출장비 정산을 처리합니다. 과제별 출장비 집행 내역이 자동으로 기록되어 연구비 지출 현황을 정확하게 파악할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">출장신청</span><span class="func-tag">출장비정산</span><span class="func-tag">과제집행</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💵</span>
+        <h3>인건비 지급 서류</h3>
+        <p>연구원 인건비 지급 결의서를 전자결재로 처리합니다. 참여율 기반 배분 내역이 자동으로 첨부되어 복잡한 인건비 결재 업무가 간소화됩니다.</p>
+        <div class="func-card-tags"><span class="func-tag">인건비결의</span><span class="func-tag">참여율</span><span class="func-tag">자동첨부</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔀</span>
+        <h3>유연한 결재선</h3>
+        <p>부서·과제별로 결재선을 자유롭게 설정합니다. 순차·병렬 결재와 위임 처리를 지원하여 각 기관의 결재 문화에 맞게 시스템을 구성할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">결재선</span><span class="func-tag">순차결재</span><span class="func-tag">위임</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📱</span>
+        <h3>모바일 결재</h3>
+        <p>스마트폰으로 결재함을 확인하고 처리합니다. 첨부된 증빙을 확인한 후 즉시 승인·반려가 가능하여 출장 중에도 업무 지연이 없습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">모바일</span><span class="func-tag">즉시결재</span><span class="func-tag">증빙확인</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📂</span>
+        <h3>문서 이력 관리</h3>
+        <p>전체 결재 문서 이력을 영구 보관합니다. 과제별·기간별 결재 내역 조회가 가능하여 감사·정산 시 필요한 문서를 즉시 제출할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">이력관리</span><span class="func-tag">영구보관</span><span class="func-tag">과제별조회</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">전자결재 업무 흐름</h2>
+      <p class="section-desc">지출결의 작성부터 회계 전표 자동 생성까지 끊김 없이 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">📄</div>
+        <h4>지출결의 작성</h4>
+        <p>표준 양식으로 지출결의서 작성</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">📎</div>
+        <h4>증빙 첨부</h4>
+        <p>세금계산서·영수증 등 증빙 파일 첨부</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">🔀</div>
+        <h4>결재선 설정</h4>
+        <p>부서·과제별 결재선 자동 적용</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>승인 처리</h4>
+        <p>PC 또는 모바일로 결재 승인</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📒</div>
+        <h4>회계 전표 자동 생성</h4>
+        <p>승인 완료 즉시 예산 집행 및 전표 반영</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🔗</div>
+      <div class="highlight-text">
+        <h3>결재 완료 즉시 회계 전표가 자동으로 생성됩니다</h3>
+        <p>지출결의 승인과 동시에 예산 집행 및 전표가 반영됩니다. 별도의 수작업 없이 결재와 회계 처리가 하나의 흐름으로 연결됩니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>결재 승인 → 예산 집행 + 전표 자동 생성</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>모바일 결재로 출장 중에도 업무 지연 없음</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>전체 결재 문서 법적 보관기간 준수 자동 관리</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="sanerp-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">인건비 결재</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">전표 자동 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-research.html">
+        <div class="related-card-icon">🔬</div>
+        <div class="related-card-name">연구과제</div>
+        <div class="related-card-desc">연구비 지출 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-university.html">
+        <div class="related-card-icon">🏛️</div>
+        <div class="related-card-name">대학연계</div>
+        <div class="related-card-desc">기관 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">✅ 전자결재 모듈</div>
+    <h2>모든 결재 업무를<br>디지털화하세요</h2>
+    <p>전문 컨설턴트가 귀 기관의 결재 프로세스에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="sanerp.html" class="btn-cta-outline">산학ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">산학ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>산학ERP 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">기관명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="기관명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

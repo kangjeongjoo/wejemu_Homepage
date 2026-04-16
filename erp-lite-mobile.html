@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모바일 모듈 - 재무ERPLite</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="erp-lite.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERPLite</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <div class="breadcrumb-path">
+      <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+      <a href="erp-lite.html">재무ERPLite</a>
+    </div>
+    <div class="breadcrumb-modules">
+        <a href="erp-lite-sales.html" class="bc-module"><span class="bc-module-icon">🛒</span>영업·물류</a>
+        <a href="erp-lite-accounting.html" class="bc-module"><span class="bc-module-icon">📒</span>회계관리</a>
+        <a href="erp-lite-hr.html" class="bc-module"><span class="bc-module-icon">👥</span>인사·급여</a>
+        <a href="erp-lite-funds.html" class="bc-module"><span class="bc-module-icon">💳</span>자금관리</a>
+        <a href="erp-lite-approval.html" class="bc-module"><span class="bc-module-icon">✅</span>전자결재</a>
+        <a href="erp-lite-mobile.html" class="bc-module active"><span class="bc-module-icon">📱</span>모바일</a>
+    </div>
+  </div>
+</div>
+
+<section class="module-hero" style="padding:80px 24px 70px; background:linear-gradient(135deg,#2a0a40 0%,#5a1a80 50%,#8030b0 100%);">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">📱</span>모바일 모듈</div>
+      <h1>언제 어디서나<br><em>모바일로 업무 처리</em></h1>
+      <p class="module-hero-desc">
+        스마트폰으로 결재·근태·급여명세서를 간편하게 처리합니다.<br>
+        중소기업 담당자의 업무 유연성을 높여줍니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">실시간</span><span class="hero-stat-label">결재처리</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">간편</span><span class="hero-stat-label">근태관리</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">즉시</span><span class="hero-stat-label">알림수신</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">📱</span>
+        <div class="icon-title">모바일 모듈</div>
+        <div class="icon-sub">결재·근태·급여명세서까지<br>스마트폰 하나로 업무 처리</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">모바일결재</span>
+          <span class="module-tag-hero">근태관리</span>
+          <span class="module-tag-hero">연차관리</span>
+          <span class="module-tag-hero">급여명세서</span>
+          <span class="module-tag-hero">자금조회</span>
+          <span class="module-tag-hero">실시간알림</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">모바일 핵심 기능</h2>
+      <p class="section-desc">사무실 밖에서도 업무가 멈추지 않도록 모바일 환경을 최적화합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">✅</span>
+        <h3>모바일 전자결재</h3>
+        <p>언제 어디서나 결재함을 확인하고 즉시 처리합니다. 문서 첨부파일을 조회한 후 승인·반려를 간편하게 처리할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">결재함</span><span class="func-tag">첨부파일</span><span class="func-tag">승인반려</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📅</span>
+        <h3>근태 관리</h3>
+        <p>출퇴근 등록, 외출·조퇴 신청을 모바일로 간편하게 처리합니다. GPS 위치 기반 출근 확인으로 정확한 근태 데이터를 유지합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">출퇴근</span><span class="func-tag">외출조퇴</span><span class="func-tag">GPS확인</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏖️</span>
+        <h3>연차 관리</h3>
+        <p>연차·반차 신청 및 잔여 연차를 모바일로 조회합니다. 부서별 연차 현황을 한눈에 파악하여 팀 스케줄을 효율적으로 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">연차신청</span><span class="func-tag">반차</span><span class="func-tag">잔여조회</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💰</span>
+        <h3>급여명세서 조회</h3>
+        <p>월별 급여명세서를 모바일에서 바로 조회합니다. 공제 항목 및 수당 상세 내역을 확인하여 급여 내역을 투명하게 파악할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">급여명세서</span><span class="func-tag">공제내역</span><span class="func-tag">수당확인</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔔</span>
+        <h3>실시간 Push 알림</h3>
+        <p>결재 요청·승인·반려 알림을 즉시 수신합니다. 자금 변동 및 중요 업무 알림을 놓치지 않고 빠르게 대응할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">Push알림</span><span class="func-tag">결재알림</span><span class="func-tag">자금알림</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💳</span>
+        <h3>자금 현황 조회</h3>
+        <p>전체 계좌 잔액 및 당일 입출금 내역을 모바일에서 조회합니다. 자금 현황 요약 대시보드로 경영자가 언제든 자금 상태를 파악합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">계좌잔액</span><span class="func-tag">입출금</span><span class="func-tag">대시보드</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">모바일 업무 흐름</h2>
+      <p class="section-desc">결재 요청부터 회계 연동까지 모바일에서 원스톱으로 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">🔔</div>
+        <h4>결재요청수신</h4>
+        <p>결재 요청 Push 알림 즉시 수신</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">📄</div>
+        <h4>문서확인</h4>
+        <p>모바일에서 결재 문서·첨부파일 확인</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>모바일승인</h4>
+        <p>즉시 승인 또는 반려 처리</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">📒</div>
+        <h4>회계연동</h4>
+        <p>결재 완료 즉시 회계 전표 자동 생성</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📨</div>
+        <h4>알림발송</h4>
+        <p>결재 완료 알림 관련자에게 자동 발송</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">📱</div>
+      <div class="highlight-text">
+        <h3>사무실 밖에서도 업무가 멈추지 않습니다</h3>
+        <p>모든 결재·근태 업무를 스마트폰으로 처리할 수 있어 장소에 구애받지 않고 업무를 진행합니다. iOS와 Android 모두 지원하며 생체인증 로그인으로 보안도 강화됩니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>iOS/Android 모두 지원</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>오프라인 결재함 조회 가능</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>생체인증 로그인 지원</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+      <p class="section-desc">모바일 모듈과 함께 사용하면 더욱 강력해집니다.</p>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="erp-lite-approval.html">
+        <div class="related-card-icon">✅</div>
+        <div class="related-card-name">전자결재</div>
+        <div class="related-card-desc">모바일 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">급여명세서 조회</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-funds.html">
+        <div class="related-card-icon">💳</div>
+        <div class="related-card-name">자금관리</div>
+        <div class="related-card-desc">자금현황 조회</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-lite-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">전표 조회</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">📱 모바일 모듈</div>
+    <h2>언제 어디서나<br>스마트하게 업무하세요</h2>
+    <p>전문 컨설턴트가 귀사의 업무에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="erp-lite.html" class="btn-cta-outline">재무ERPLite 전체 보기</a>
+    </div>
+  </div>
+</section>
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERPLite</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERPLite 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

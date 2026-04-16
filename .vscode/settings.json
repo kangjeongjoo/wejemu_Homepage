@@ -1,3 +1,8 @@
 {
-    "claudeCode.useTerminal": true
+    "claudeCode.useTerminal": false,
+    "claudeCode.preferredLocation": "editor",
+    "workbench.editor.autoLockGroups": {
+        "default": true,
+        "terminalEditor": false
+    }
 }

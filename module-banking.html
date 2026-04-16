@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>뱅킹연동 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+    <a href="erp.html">재무ERP</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">뱅킹연동</span>
+  </div>
+</div>
+
+<section class="module-hero banking" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">🏦</span>뱅킹연동 모듈</div>
+      <h1>ERP 안에서 모든<br><em>기업 뱅킹 업무</em> 처리</h1>
+      <p class="module-hero-desc">
+        웹케시 브랜치 기업 뱅킹과 완벽하게 연동됩니다.<br>
+        계좌 조회부터 자금 이체, 대량 이체, 급여 이체까지 ERP 내에서 한 번에 처리하세요.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">실시간</span><span class="hero-stat-label">계좌 조회</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">전표 생성</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">일괄</span><span class="hero-stat-label">대량 이체</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">🏦</span>
+        <div class="icon-title">뱅킹연동 모듈</div>
+        <div class="icon-sub">웹케시 브랜치 기업뱅킹과<br>완벽 연동된 자금 관리</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">계좌조회</span>
+          <span class="module-tag-hero">자금이체</span>
+          <span class="module-tag-hero">대량이체</span>
+          <span class="module-tag-hero">급여이체</span>
+          <span class="module-tag-hero">자동전표</span>
+          <span class="module-tag-hero">자금현황</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">뱅킹연동 핵심 기능</h2>
+      <p class="section-desc">웹케시 핀테크 기술로 기업 뱅킹과 ERP를 완벽하게 통합합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">👁️</span>
+        <h3>실시간 계좌 조회</h3>
+        <p>연동된 전 계좌의 잔액과 거래내역을 ERP 화면에서 실시간으로 조회합니다. 여러 은행 계좌를 하나의 화면에서 통합 관리합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">실시간잔액</span><span class="func-tag">거래내역</span><span class="func-tag">멀티뱅킹</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💸</span>
+        <h3>자금 이체</h3>
+        <p>ERP 결재 승인과 연동하여 자금 이체를 즉시 처리합니다. 공인인증서 없이도 보안 토큰으로 안전하게 이체할 수 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">결재연동</span><span class="func-tag">보안이체</span><span class="func-tag">즉시처리</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📋</span>
+        <h3>대량 이체</h3>
+        <p>엑셀 파일을 업로드하거나 ERP 데이터를 활용하여 수백 건의 이체를 한 번에 처리합니다. 협력업체 대금 지급에 최적화되어 있습니다.</p>
+        <div class="func-card-tags"><span class="func-tag">엑셀업로드</span><span class="func-tag">일괄이체</span><span class="func-tag">대금지급</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">👥</span>
+        <h3>급여 이체</h3>
+        <p>급여 대장과 연동하여 임직원 전원의 급여를 일괄 이체합니다. 급여 명세서 발송까지 한 번에 처리되어 급여일 업무가 크게 단축됩니다.</p>
+        <div class="func-card-tags"><span class="func-tag">급여대장연동</span><span class="func-tag">일괄이체</span><span class="func-tag">명세서발송</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🤖</span>
+        <h3>통장 자동 전표</h3>
+        <p>연결된 계좌의 입출금 내역이 실시간으로 ERP에 반영되어 자동으로 전표를 생성합니다. 수기 입력 없이 장부와 통장이 항상 일치합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자동전표</span><span class="func-tag">실시간반영</span><span class="func-tag">장부일치</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>자금 현황 대시보드</h3>
+        <p>전사 계좌의 자금 현황, 입출금 예정, 자금 흐름을 한 화면에서 파악합니다. 의사결정에 필요한 자금 정보를 실시간으로 제공합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자금대시보드</span><span class="func-tag">예정현황</span><span class="func-tag">자금흐름</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">자금 이체 처리 흐름</h2>
+      <p class="section-desc">결재 승인부터 이체 완료까지 자동으로 연동됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">📝</div>
+        <h4>이체 기안</h4>
+        <p>자금이체 신청서 작성, 수취인·금액 입력</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>전자결재 승인</h4>
+        <p>결재선에 따른 승인 처리 (모바일 포함)</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">🏦</div>
+        <h4>이체 자동 연동</h4>
+        <p>승인 완료 즉시 뱅킹 이체 처리 요청</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">📝</div>
+        <h4>전표 자동 생성</h4>
+        <p>이체 완료와 동시에 회계 전표 자동 생성</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📊</div>
+        <h4>자금 현황 반영</h4>
+        <p>계좌 잔액·자금 현황 대시보드 실시간 갱신</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🏦</div>
+      <div class="highlight-text">
+        <h3>웹케시 브랜치 뱅킹과 완벽 통합</h3>
+        <p>웹케시㈜의 기업 뱅킹 플랫폼 '브랜치'와 재무ERP가 하나의 시스템으로 통합됩니다. 별도 뱅킹 시스템에 로그인할 필요 없이 ERP 화면 내에서 모든 기업 뱅킹 업무를 처리합니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>국내 100개 이상 금융기관 계좌 연동 지원</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>통장 내역 실시간 스크래핑 후 자동 전표 생성</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>보안등급 최고 수준의 안전한 이체 처리</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="module-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">이체 내역 전표 자동 생성</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-approval.html">
+        <div class="related-card-icon">✅</div>
+        <div class="related-card-name">전자결재</div>
+        <div class="related-card-desc">결재 승인 후 이체 자동 처리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">급여 일괄 이체 자동 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-ai.html">
+        <div class="related-card-icon">🤖</div>
+        <div class="related-card-name">AI에이전트</div>
+        <div class="related-card-desc">자금 흐름 예측 및 이상 감지</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">🏦 뱅킹연동 모듈</div>
+    <h2>ERP와 뱅킹이 하나로<br>자금 관리를 자동화하세요</h2>
+    <p>전문 컨설턴트가 귀사의 자금 관리 환경에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

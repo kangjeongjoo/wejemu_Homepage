@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회계관리 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="gnb">
+    <a href="erp.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta">
+      <a href="login.html" target="login_page" class="btn-login">로그인</a>
+      <button class="btn-consult" onclick="openModal()">도입 문의</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <div class="breadcrumb-path">
+      <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+      <a href="erp.html">재무ERP</a>
+    </div>
+    <div class="breadcrumb-modules">
+        <a href="erp-budget.html" class="bc-module"><span class="bc-module-icon">📊</span>예산관리</a>
+        <a href="erp-accounting.html" class="bc-module active"><span class="bc-module-icon">📒</span>회계관리</a>
+        <a href="erp-hr.html" class="bc-module"><span class="bc-module-icon">👥</span>인사·급여</a>
+        <a href="erp-approval.html" class="bc-module"><span class="bc-module-icon">✅</span>전자결재</a>
+        <a href="erp-mobile.html" class="bc-module"><span class="bc-module-icon">📱</span>모바일</a>
+        <a href="erp-banking.html" class="bc-module"><span class="bc-module-icon">🏦</span>뱅킹연동</a>
+        <a href="erp-integration.html" class="bc-module"><span class="bc-module-icon">🔗</span>특화ERP연계</a>
+        <a href="erp-ai.html" class="bc-module"><span class="bc-module-icon">🤖</span>AI에이전트</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="module-hero accounting" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge">
+        <span class="module-hero-icon-inline">📒</span>
+        회계관리 모듈
+      </div>
+      <h1>증빙부터 재무제표까지<br><em>자동으로 완성</em>됩니다</h1>
+      <p class="module-hero-desc">
+        카드·세금계산서·현금영수증 등 모든 증빙을 자동 수집하여 전표를 즉시 생성합니다.<br>
+        결산부터 재무제표 출력까지 전 회계 프로세스를 자동화합니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">자동</span>
+          <span class="hero-stat-label">전표 생성</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">실시간</span>
+          <span class="hero-stat-label">재무제표</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">자동화</span>
+          <span class="hero-stat-label">결산처리</span>
+        </div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">📒</span>
+        <div class="icon-title">회계관리 모듈</div>
+        <div class="icon-sub">전표 입력부터 결산·재무제표까지<br>전 회계 프로세스 자동화</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">전표관리</span>
+          <span class="module-tag-hero">재무제표</span>
+          <span class="module-tag-hero">세금계산서</span>
+          <span class="module-tag-hero">결산처리</span>
+          <span class="module-tag-hero">부가세신고</span>
+          <span class="module-tag-hero">자동분개</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY FUNCTIONS ===== -->
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">회계관리 핵심 기능</h2>
+      <p class="section-desc">증빙 자동화와 AI 분개로 수기 입력 없이 정확한 회계 처리를 실현합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">🧾</span>
+        <h3>증빙 자동 수집</h3>
+        <p>카드매출·세금계산서·현금영수증 등을 자동으로 수집하여 전표를 즉시 생성합니다. 통장 입출금 내역도 자동으로 반영됩니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">카드영수증</span>
+          <span class="func-tag">세금계산서</span>
+          <span class="func-tag">현금영수증</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📝</span>
+        <h3>전표 관리</h3>
+        <p>일반·매입매출·자금 전표를 체계적으로 관리합니다. 반복 전표 패턴 등록으로 정기 거래를 자동 입력할 수 있습니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">일반전표</span>
+          <span class="func-tag">매입매출</span>
+          <span class="func-tag">반복전표</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>실시간 재무제표</h3>
+        <p>재무상태표·손익계산서·현금흐름표·자본변동표를 실시간으로 조회합니다. 전기 비교 분석과 경영 지표 자동 계산을 지원합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">재무상태표</span>
+          <span class="func-tag">손익계산서</span>
+          <span class="func-tag">현금흐름표</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔖</span>
+        <h3>매입·매출 관리</h3>
+        <p>세금계산서·계산서·카드·현금영수증 등 모든 매입매출 증빙을 통합 관리합니다. 전자세금계산서 발행 및 수신을 지원합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">전자세금계산서</span>
+          <span class="func-tag">매입분석</span>
+          <span class="func-tag">매출집계</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏁</span>
+        <h3>결산 처리</h3>
+        <p>월결산·분기결산·연결산을 단계별로 처리합니다. 감가상각, 선급비용, 미지급비용 등 결산 분개를 자동으로 생성합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">월결산</span>
+          <span class="func-tag">연결산</span>
+          <span class="func-tag">감가상각</span>
+        </div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏛</span>
+        <h3>부가세 신고</h3>
+        <p>부가가치세 신고서를 자동 생성하고 홈택스 연동으로 간편하게 신고합니다. 예정신고·확정신고·조기환급을 모두 지원합니다.</p>
+        <div class="func-card-tags">
+          <span class="func-tag">부가세신고</span>
+          <span class="func-tag">홈택스연동</span>
+          <span class="func-tag">조기환급</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKFLOW ===== -->
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">회계 처리 자동화 흐름</h2>
+      <p class="section-desc">증빙 수집부터 재무제표 생성까지 수기 작업 없이 자동 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">🧾</div>
+        <h4>증빙 자동 수집</h4>
+        <p>카드·세금계산서·통장내역 실시간 수집</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">🤖</div>
+        <h4>AI 자동 분개</h4>
+        <p>거래 내용 분석 후 계정과목 자동 분류</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">📝</div>
+        <h4>전표 자동 생성</h4>
+        <p>검토 후 확정·수정, 전표 자동 저장</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">🏁</div>
+        <h4>월결산 처리</h4>
+        <p>결산 분개 자동 생성, 마감 처리</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📊</div>
+        <h4>재무제표 출력</h4>
+        <p>재무제표·경영보고서 자동 생성</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🧾</div>
+      <div class="highlight-text">
+        <h3>수기 입력 없이, 모든 증빙이 자동으로 처리됩니다</h3>
+        <p>웹케시의 핀테크 스크래핑 기술로 카드·세금계산서·현금영수증·통장내역을 자동 수집하여 전표를 생성합니다. 경리 담당자의 단순 반복 업무를 획기적으로 줄여줍니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>법인카드 전 영수증 자동 수집 및 전표 생성</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>전자세금계산서 국세청 자동 연동</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>통장 입출금 내역 실시간 반영으로 장부 불일치 제로화</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RELATED MODULES ===== -->
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+      <p class="section-desc">회계관리 모듈과 함께 사용하면 더욱 강력해집니다.</p>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="erp-budget.html">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-name">예산관리</div>
+        <div class="related-card-desc">예산 대비 실적 분석</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-banking.html">
+        <div class="related-card-icon">🏦</div>
+        <div class="related-card-name">뱅킹연동</div>
+        <div class="related-card-desc">통장 자동 전표 처리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-ai.html">
+        <div class="related-card-icon">🤖</div>
+        <div class="related-card-name">AI에이전트</div>
+        <div class="related-card-desc">자동 분개 및 이상 감지</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="erp-approval.html">
+        <div class="related-card-icon">✅</div>
+        <div class="related-card-name">전자결재</div>
+        <div class="related-card-desc">회계 전표 결재 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">📒 회계관리 모듈</div>
+    <h2>수기 입력 없이,<br>자동화된 회계 장부를 경험하세요</h2>
+    <p>전문 컨설턴트가 귀사의 회계 업무에 맞는 최적의 도입 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a id="cta-back" href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOATING SIDEBAR ===== -->
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#">
+    <div class="float-btn-icon">📞</div>
+    <div class="float-btn-label">신규가입<br>상담신청</div>
+    <div class="float-btn-num">1600-2617</div>
+  </a>
+  <a class="float-btn" href="partnership.html">
+    <div class="float-btn-icon">🤝</div>
+    <div class="float-btn-label">제휴 문의</div>
+  </a>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

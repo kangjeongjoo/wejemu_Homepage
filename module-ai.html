@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI에이전트 모듈 - 재무ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">재무<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+    <a href="erp.html">재무ERP</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">AI에이전트</span>
+  </div>
+</div>
+
+<section class="module-hero ai" style="padding:80px 24px 70px;">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">🤖</span>AI에이전트 모듈</div>
+      <h1>반복 업무는 AI가,<br>사람은 <em>판단과 전략</em>에 집중</h1>
+      <p class="module-hero-desc">
+        AI가 자동으로 계정과목을 분류하고, 이상 거래를 탐지하며, 재무 리포트를 생성합니다.<br>
+        담당자의 단순 반복 업무를 AI가 대신 처리하여 업무 효율을 극대화합니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">AI</span><span class="hero-stat-label">자동 분개</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">실시간</span><span class="hero-stat-label">이상 탐지</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">자동</span><span class="hero-stat-label">리포트 생성</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">🤖</span>
+        <div class="icon-title">AI에이전트 모듈</div>
+        <div class="icon-sub">자동 분개·이상 탐지·리포트 생성<br>지능형 업무 자동화</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">자동분개</span>
+          <span class="module-tag-hero">이상탐지</span>
+          <span class="module-tag-hero">리포트생성</span>
+          <span class="module-tag-hero">예측분석</span>
+          <span class="module-tag-hero">자동증빙</span>
+          <span class="module-tag-hero">AI챗봇</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">AI에이전트 핵심 기능</h2>
+      <p class="section-desc">최신 AI 기술로 재무 업무 자동화와 인사이트를 동시에 제공합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">🧠</span>
+        <h3>AI 자동 분개</h3>
+        <p>거래 내용·금액·거래처 정보를 AI가 분석하여 최적의 계정과목을 자동으로 분류합니다. 반복 패턴을 학습하여 시간이 지날수록 정확도가 향상됩니다.</p>
+        <div class="func-card-tags"><span class="func-tag">계정과목자동분류</span><span class="func-tag">패턴학습</span><span class="func-tag">정확도향상</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🚨</span>
+        <h3>이상 거래 탐지</h3>
+        <p>비정상적인 금액, 중복 거래, 불규칙한 패턴 등을 실시간으로 감지하여 담당자에게 즉시 알립니다. 재무 부정과 오류를 사전에 예방합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">중복거래감지</span><span class="func-tag">이상패턴</span><span class="func-tag">실시간알림</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📄</span>
+        <h3>재무 리포트 자동 생성</h3>
+        <p>월간·분기·연간 재무 분석 리포트를 AI가 자동으로 작성합니다. 핵심 지표 해석과 전기 대비 분석 코멘트까지 포함된 경영 보고서를 제공합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자동작성</span><span class="func-tag">KPI분석</span><span class="func-tag">경영보고서</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔮</span>
+        <h3>자금 흐름 예측</h3>
+        <p>과거 데이터와 현재 계획을 바탕으로 미래 자금 흐름을 예측합니다. 자금 부족이 예상될 경우 미리 경보를 발령하여 선제적 대응이 가능합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자금예측</span><span class="func-tag">부족경보</span><span class="func-tag">선제대응</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🔗</span>
+        <h3>자동 증빙 매칭</h3>
+        <p>세금계산서·카드영수증·통장 거래를 AI가 자동으로 매칭합니다. 미매칭 증빙을 자동으로 식별하여 회계 처리 누락을 방지합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자동매칭</span><span class="func-tag">미매칭감지</span><span class="func-tag">누락방지</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">💬</span>
+        <h3>AI 챗봇 어시스턴트</h3>
+        <p>재무 데이터에 대해 자연어로 질의하면 AI가 즉시 답변합니다. "이번 달 매출이 얼마야?" 같은 질문에 데이터를 검색하여 답변합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">자연어질의</span><span class="func-tag">데이터검색</span><span class="func-tag">즉시답변</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">AI 자동 분개 처리 흐름</h2>
+      <p class="section-desc">거래 발생부터 전표 확정까지 AI가 자동으로 처리합니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">🧾</div>
+        <h4>거래 데이터 수집</h4>
+        <p>통장·카드·세금계산서 자동 수집</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">🧠</div>
+        <h4>AI 분석</h4>
+        <p>거래 유형·금액·거래처 AI 분석</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">📝</div>
+        <h4>자동 분개 제안</h4>
+        <p>최적 계정과목 자동 분류·제안</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">👁️</div>
+        <h4>검토·확정</h4>
+        <p>담당자 검토 후 전표 확정</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">🔄</div>
+        <h4>학습·고도화</h4>
+        <p>확정 내용 피드백으로 AI 정확도 향상</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🧠</div>
+      <div class="highlight-text">
+        <h3>사용할수록 똑똑해지는 AI</h3>
+        <p>재무ERP의 AI는 기업별 거래 패턴을 학습하여 시간이 지날수록 분개 정확도가 향상됩니다. 초기 도입 시에도 높은 정확도를 제공하지만, 사용 6개월 후에는 분개 자동화율이 더욱 높아집니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>반복 거래 자동 인식으로 분개 자동화율 지속 향상</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>잘못된 분개 수정 시 AI가 패턴을 학습하여 재발 방지</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>업종별 맞춤 학습 모델로 초기부터 높은 정확도 제공</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="module-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">AI 분개로 전표 자동 생성</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-banking.html">
+        <div class="related-card-icon">🏦</div>
+        <div class="related-card-name">뱅킹연동</div>
+        <div class="related-card-desc">자금 데이터 AI 분석</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-budget.html">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-name">예산관리</div>
+        <div class="related-card-desc">AI 기반 예산 분석 리포트</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="module-mobile.html">
+        <div class="related-card-icon">📱</div>
+        <div class="related-card-name">모바일</div>
+        <div class="related-card-desc">AI 알림 모바일 수신</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">🤖 AI에이전트 모듈</div>
+    <h2>AI가 대신 처리하는<br>스마트한 재무 관리를 경험하세요</h2>
+    <p>전문 컨설턴트가 귀사에 최적화된 AI 자동화 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="erp.html" class="btn-cta-outline">재무ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">재무ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>재무ERP 가입 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">회사명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="회사명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

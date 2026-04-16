@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대학연계 모듈 - 산학ERP</title>
+  <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+
+<header>
+  <div class="gnb">
+    <a href="sanerp.html" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text">산학<span>ERP</span></div>
+    </a>
+    <div class="gnb-cta"><a href="login.html" target="login_page" class="btn-login">로그인</a><button class="btn-consult" onclick="openModal()">도입 문의</button></div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <div class="breadcrumb-path">
+      <a href="index.html">홈</a><span class="breadcrumb-sep">›</span>
+      <a href="sanerp.html">산학ERP</a>
+    </div>
+    <div class="breadcrumb-modules">
+        <a href="sanerp-budget.html" class="bc-module"><span class="bc-module-icon">📊</span>예산관리</a>
+        <a href="sanerp-accounting.html" class="bc-module"><span class="bc-module-icon">📒</span>회계관리</a>
+        <a href="sanerp-hr.html" class="bc-module"><span class="bc-module-icon">👥</span>인사·급여</a>
+        <a href="sanerp-research.html" class="bc-module"><span class="bc-module-icon">🔬</span>연구과제</a>
+        <a href="sanerp-university.html" class="bc-module active"><span class="bc-module-icon">🏛️</span>대학연계</a>
+    </div>
+  </div>
+</div>
+
+<section class="module-hero" style="padding:80px 24px 70px; background:linear-gradient(135deg,#1a0a3a 0%,#3a1a7a 50%,#5a3ab0 100%);">
+  <div class="module-hero-inner">
+    <div class="module-hero-text">
+      <div class="module-hero-badge"><span class="module-hero-icon-inline">🏛️</span>대학연계 모듈</div>
+      <h1>대학 인사시스템과<br><em>유연하게 자동 연계</em></h1>
+      <p class="module-hero-desc">
+        각 대학의 인사시스템과 유연하게 연계되며, 산학협력단 회계기준을 적용한 투명한 재무관리를 구현합니다.<br>
+        대학별 특수 요건에 맞게 커스터마이징이 가능하여 최적화된 환경을 구성할 수 있습니다.
+      </p>
+      <div class="module-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">유연한</span><span class="hero-stat-label">시스템 연계</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">국공립·사립</span><span class="hero-stat-label">대학 지원</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">커스텀</span><span class="hero-stat-label">요건 대응</span></div>
+      </div>
+    </div>
+    <div class="module-hero-visual">
+      <div class="module-icon-big">
+        <span class="icon-main">🏛️</span>
+        <div class="icon-title">대학연계 모듈</div>
+        <div class="icon-sub">인사시스템 연계부터 산학협력단 회계기준·<br>국공립·사립대 특수 요건까지 지원</div>
+        <div class="module-tags-hero">
+          <span class="module-tag-hero">인사시스템</span>
+          <span class="module-tag-hero">산학협력단회계</span>
+          <span class="module-tag-hero">국공립대</span>
+          <span class="module-tag-hero">사립대</span>
+          <span class="module-tag-hero">커스터마이징</span>
+          <span class="module-tag-hero">API 연계</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">KEY FUNCTIONS</div>
+      <h2 class="section-title">대학연계 핵심 기능</h2>
+      <p class="section-desc">각 대학의 특수 환경에 맞게 최적화된 연계 기능을 제공합니다.</p>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="func-card-icon">👥</span>
+        <h3>인사시스템 연계</h3>
+        <p>대학 인사시스템과 연계하여 교직원 정보, 발령 내역, 급여 데이터를 자동으로 동기화합니다. 인사 변경 사항이 산학ERP에 실시간으로 반영됩니다.</p>
+        <div class="func-card-tags"><span class="func-tag">교직원정보</span><span class="func-tag">발령연동</span><span class="func-tag">급여동기화</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">🏛️</span>
+        <h3>국공립대 급여 체계 지원</h3>
+        <p>공무원 보수 규정에 따른 복잡한 급여 체계를 완벽하게 지원합니다. 호봉제, 수당 체계, 공무원 연금 처리 등 국공립대 특수 급여 업무를 자동화합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">호봉제</span><span class="func-tag">공무원연금</span><span class="func-tag">수당관리</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📋</span>
+        <h3>산학협력단 회계기준 적용</h3>
+        <p>산학협력단 회계처리 기준에 따른 계정과목 체계와 결산 기준을 적용합니다. 연구비·기술료·산학협력수익 등 산학협력단 특수 계정을 관리하고 교비 회계와 명확하게 분리하여 투명하게 운영합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">산학협력단회계</span><span class="func-tag">연구비계정</span><span class="func-tag">교비분리</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">📊</span>
+        <h3>교육부 보고 자료 생성</h3>
+        <p>교육부, 한국연구재단 등 관리 기관에 제출하는 보고 자료를 자동으로 생성합니다. 정해진 서식에 맞게 데이터를 자동 집계하여 보고 업무를 간소화합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">교육부보고</span><span class="func-tag">연구재단</span><span class="func-tag">자동생성</span></div>
+      </div>
+      <div class="func-card">
+        <span class="func-card-icon">⚙️</span>
+        <h3>대학별 커스터마이징</h3>
+        <p>각 대학의 특수 요건과 업무 방식에 맞게 시스템을 커스터마이징합니다. 기존 레거시 시스템과의 데이터 연계 및 마이그레이션을 전문 컨설턴트가 지원합니다.</p>
+        <div class="func-card-tags"><span class="func-tag">맞춤설정</span><span class="func-tag">레거시연계</span><span class="func-tag">컨설팅</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workflow-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WORKFLOW</div>
+      <h2 class="section-title">대학연계 업무 흐름</h2>
+      <p class="section-desc">대학 시스템과의 연계부터 보고서 생성까지 자동으로 처리됩니다.</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="workflow-step-num">1</div>
+        <div class="workflow-step-icon">⚙️</div>
+        <h4>시스템 연계 설정</h4>
+        <p>대학 행정시스템과 API 연계 초기 설정</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">2</div>
+        <div class="workflow-step-icon">🔄</div>
+        <h4>데이터 자동 동기화</h4>
+        <p>인사 데이터 실시간 자동 동기화</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">3</div>
+        <div class="workflow-step-icon">📒</div>
+        <h4>전표 자동 생성</h4>
+        <p>연계 데이터 기반 회계전표 자동 생성</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">4</div>
+        <div class="workflow-step-icon">✅</div>
+        <h4>결재 처리</h4>
+        <p>담당자 확인 및 승인 프로세스 처리</p>
+      </div>
+      <div class="workflow-arrow">›</div>
+      <div class="workflow-step">
+        <div class="workflow-step-num">5</div>
+        <div class="workflow-step-icon">📊</div>
+        <h4>보고서 생성</h4>
+        <p>관리 기관 제출용 보고서 자동 생성</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-icon">🏛️</div>
+      <div class="highlight-text">
+        <h3>산학협력단 회계기준으로 투명한 재무관리를 실현합니다</h3>
+        <p>산학협력단 회계처리 기준에 따른 계정과목 체계를 적용하고, 인사시스템 연계를 통해 급여·인건비 데이터를 자동으로 반영합니다. 국공립·사립대 구분 없이 각 대학 환경에 최적화된 운영을 지원합니다.</p>
+        <div class="highlight-bullets">
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>산학협력단 회계처리 기준 계정과목 체계 적용</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>연구비·기술료·산학협력수익 특수 계정 자동 처리</span>
+          </div>
+          <div class="highlight-bullet">
+            <div class="bullet-dot"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <span>교비 회계와 산학협력단 회계 명확 분리 관리</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">RELATED</div>
+      <h2 class="section-title">연관 모듈</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="sanerp-hr.html">
+        <div class="related-card-icon">👥</div>
+        <div class="related-card-name">인사·급여</div>
+        <div class="related-card-desc">교직원 급여·인건비 연동</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-accounting.html">
+        <div class="related-card-icon">📒</div>
+        <div class="related-card-name">회계관리</div>
+        <div class="related-card-desc">산학협력단 회계기준 전표 처리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-research.html">
+        <div class="related-card-icon">🔬</div>
+        <div class="related-card-name">연구과제</div>
+        <div class="related-card-desc">RERP 연구과제 자동 연계</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+      <a class="related-card" href="sanerp-budget.html">
+        <div class="related-card-icon">📊</div>
+        <div class="related-card-name">예산관리</div>
+        <div class="related-card-desc">산학협력단 예산편성·집행 관리</div>
+        <div class="related-card-arrow">자세히 보기 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-badge">🏛️ 대학연계 모듈</div>
+    <h2>귀 대학 환경에 최적화된<br>연계 방안을 제안받으세요</h2>
+    <p>전문 컨설턴트가 귀 기관의 시스템 환경을 분석하여 최적의 연계 방안을 제안해 드립니다.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta-primary" onclick="openModal();return false;">도입 상담 신청</a>
+      <a href="sanerp.html" class="btn-cta-outline">산학ERP 전체 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="float-sidebar">
+  <a class="float-btn" onclick="openModal();return false;" href="#"><div class="float-btn-icon">📞</div><div class="float-btn-label">신규가입<br>상담신청</div><div class="float-btn-num">1600-2617</div></a>
+  <a class="float-btn" href="partnership.html"><div class="float-btn-icon">🤝</div><div class="float-btn-label">제휴 문의</div></a>
+</div>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-logo">산학ERP</div>
+      <h2>가입 전화상담 신청</h2>
+      <p>산학ERP 상담센터에서 고객님께<br>전화를 드리겠습니다.</p>
+    </div>
+    <div class="modal-body">
+      <div class="form-row"><label class="form-label">기관명 <span class="req">*</span></label><input type="text" class="form-input" placeholder="기관명 입력" /></div>
+      <div class="form-row"><label class="form-label">사업자번호 <span class="req">*</span></label><input type="text" class="form-input" placeholder="사업자번호 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-input" placeholder="이름 입력" /></div>
+      <div class="form-row"><label class="form-label">연락처 <span class="req">*</span></label><input type="text" class="form-input" placeholder="연락처 입력('-' 제외)" /></div>
+      <div class="form-row"><label class="form-label">이메일 <span class="req">*</span></label><input type="email" class="form-input" placeholder="이메일 주소 입력" /></div>
+      <div class="form-row"><label class="form-label">비고</label><input type="text" class="form-input" placeholder="희망하시는 상담시간이 있으면 적어주세요." /></div>
+      <div class="form-notice">· 운영시간 월~금 : 09:00~19:00 / <span>토, 일, 공휴일 휴무</span></div>
+      <div class="form-checks">
+        <label class="form-check"><input type="checkbox" />마케팅 정보 수신 동의(선택)</label>
+        <label class="form-check"><input type="checkbox" />개인정보 수집 및 이용 동의(필수)</label>
+      </div>
+      <button class="btn-submit">상담 신청</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-info"><strong>웹케시㈜</strong> &nbsp;|&nbsp; 대표이사 : 강원주 &nbsp;|&nbsp; 사업자등록번호 : 214-86-35102<br>통신판매업신고 : 2017-서울영등포-0284 &nbsp;|&nbsp; 서울 영등포구 영신로 220 KnK디지털타워 20층<br>이메일 : serp@webcash.co.kr</div>
+    <div class="footer-legal">
+      <a href="privacy-policy.html" onclick="window.open('privacy-policy.html','privacy','width=840,height=700,scrollbars=yes,resizable=yes'); return false;" class="hl">개인정보처리방침</a>
+      <a href="https://www.webcash.co.kr/2025/MAIN.html" target="_blank">회사소개</a>
+      <a href="partnership.html">찾아오시는 길</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copyright">© 2024 웹케시㈜ All rights reserved.</div></div>
+</footer>
+<script>
+  function openModal() { document.getElementById('consultModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('consultModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('consultModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+</body>
+</html>

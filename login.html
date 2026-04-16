@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 - 재무ERP</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="login-wrap">
+  <div class="login-box">
+
+    <div class="login-logo">
+      <a href="index.html">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="logo-text">재무<span>ERP</span></div>
+      </a>
+    </div>
+
+    <form class="login-form" onsubmit="return false;">
+
+      <div class="form-group">
+        <input type="text" class="form-input" id="bizno" placeholder="대표자사 사업자번호를 입력하세요." />
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-input" id="userid" placeholder="아이디를 입력하세요." />
+      </div>
+
+      <div class="form-group password-group">
+        <input type="password" class="form-input" id="password" placeholder="비밀번호를 입력하세요." />
+        <button type="button" class="btn-eye" onclick="togglePw(this)" tabindex="-1">
+          <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="form-save">
+        <label class="save-label">
+          <input type="checkbox" id="saveId" />
+          <span class="custom-check"></span>
+          사업자번호/아이디 저장
+        </label>
+      </div>
+
+      <button type="submit" class="btn-login">로그인</button>
+
+      <div class="login-bottom">
+        <a href="free-trial.html" class="link-signup">재무 ERP 가입신청 &gt;</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<script>
+  function togglePw(btn) {
+    var input = document.getElementById('password');
+    var icon = btn.querySelector('svg');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/>';
+    } else {
+      input.type = 'password';
+      icon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+    }
+  }
+</script>
+
+</body>
+</html>
